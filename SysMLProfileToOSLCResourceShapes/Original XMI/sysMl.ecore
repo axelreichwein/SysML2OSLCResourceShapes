@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sysMl" nsURI="http://www.omg.org/spec/SysML/20120322/SysML"
+    nsPrefix="sysMl">
+  <eSubpackages name="portsFlows" nsURI="http:///sysMl/portsFlows.ecore" nsPrefix="sysMl.portsFlows">
+    <eClassifiers xsi:type="ecore:EEnum" name="FlowDirection">
+      <eLiterals name="in"/>
+      <eLiterals name="out" value="1"/>
+      <eLiterals name="inout" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FullPort">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basePort" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProxyPort">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basePort" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FlowProperty">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" ordered="false"
+          lowerBound="1" eType="#//portsFlows/FlowDirection"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseProperty" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ItemFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="itemProperty" ordered="false"
+          eType="ecore:EClass uml.ecore#//Property"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseInformationFlow"
+          ordered="false" lowerBound="1" eType="ecore:EClass uml.ecore#//InformationFlow"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceBlock" eSuperTypes="#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InvocationOnNestedPortAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseInvocationAction"
+          ordered="false" lowerBound="1" eType="ecore:EClass uml.ecore#//InvocationAction"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="onNestedPort" unique="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TriggerOnNestedPort">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseTrigger" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Trigger"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="onNestedPort" unique="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AcceptChangeStructuralFeatureEventAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseAcceptEventAction"
+          ordered="false" lowerBound="1" eType="ecore:EClass uml.ecore#//AcceptEventAction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ChangeStructuralFeatureEvent">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseChangeEvent" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ChangeEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="structuralFeature" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//StructuralFeature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DirectedFeature">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureDirection" ordered="false"
+          lowerBound="1" eType="#//portsFlows/FeatureDirection"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseFeature" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Feature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="FeatureDirection">
+      <eLiterals name="provided"/>
+      <eLiterals name="required" value="1"/>
+      <eLiterals name="providedRequired" value="2"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="blocks" nsURI="http:///sysMl/blocks.ecore" nsPrefix="sysMl.blocks">
+    <eClassifiers xsi:type="ecore:EClass" name="DistributedProperty">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseProperty" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertySpecificType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseClassifier" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Classifier"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParticipantProperty">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="end" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Property"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseProperty" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ValueType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="quantityKind" ordered="false"
+          eType="#//blocks/QuantityKind"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="unit" ordered="false"
+          eType="#//blocks/Unit"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseDataType" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//DataType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="QuantityKind">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" ordered="false"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definitionUri" ordered="false"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseInstanceSpecification"
+          ordered="false" lowerBound="1" eType="ecore:EClass uml.ecore#//InstanceSpecification"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Unit">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="quantityKind" ordered="false"
+          eType="#//blocks/QuantityKind"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" ordered="false"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definitionUri" ordered="false"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseInstanceSpecification"
+          ordered="false" lowerBound="1" eType="ecore:EClass uml.ecore#//InstanceSpecification"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectorProperty">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connector" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Connector"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseProperty" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NestedConnectorEnd">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="propertyPath" unique="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//Property"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseConnectorEnd" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ConnectorEnd"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BindingConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseConnector" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Connector"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Block">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isEncapsulated" ordered="false"
+          eType="ecore:EDataType types.ecore#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseClass" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Class"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="deprecatedElements" nsURI="http:///sysMl/deprecatedElements.ecore"
+      nsPrefix="sysMl.deprecatedElements">
+    <eClassifiers xsi:type="ecore:EClass" name="FlowPort">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAtomic" ordered="false"
+          lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" ordered="false"
+          lowerBound="1" eType="#//portsFlows/FlowDirection"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basePort" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FlowSpecification">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseInterface" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Interface"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="allocations" nsURI="http:///sysMl/allocations.ecore" nsPrefix="sysMl.allocations">
+    <eClassifiers xsi:type="ecore:EClass" name="AllocateActivityPartition">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseActivityPartition"
+          ordered="false" lowerBound="1" eType="ecore:EClass uml.ecore#//ActivityPartition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Allocate">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseAbstraction" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Abstraction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Allocated">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allocatedFrom" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//NamedElement"
+          volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allocatedTo" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//NamedElement"
+          volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseNamedElement" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//NamedElement"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="constraintBlocks" nsURI="http:///sysMl/constraintBlocks.ecore"
+      nsPrefix="sysMl.constraintBlocks">
+    <eClassifiers xsi:type="ecore:EClass" name="ConstraintBlock" eSuperTypes="#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ConstraintProperty">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseProperty" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Property"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="requirements" nsURI="http:///sysMl/requirements.ecore" nsPrefix="sysMl.requirements">
+    <eClassifiers xsi:type="ecore:EClass" name="Requirement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false"
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="derived" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//requirements/Requirement" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="derivedFrom" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//requirements/Requirement" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="satisfiedBy" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//NamedElement"
+          volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refinedBy" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//NamedElement"
+          volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tracedTo" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//NamedElement"
+          volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="verifiedBy" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EClass uml.ecore#//NamedElement"
+          volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="master" ordered="false"
+          eType="#//requirements/Requirement" volatile="true" transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseClass" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Verify" eSuperTypes="l2.ecore#//Trace"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TestCase">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseOperation" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Operation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseBehavior" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Behavior"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Satisfy" eSuperTypes="l2.ecore#//Trace"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="VerdictKind">
+      <eLiterals name="pass"/>
+      <eLiterals name="fail" value="1"/>
+      <eLiterals name="inconclusive" value="2"/>
+      <eLiterals name="error" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RequirementRelated">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tracedFrom" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//requirements/Requirement" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="satisfies" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//requirements/Requirement" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refines" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//requirements/Requirement" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="verifies" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//requirements/Requirement" volatile="true"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseNamedElement" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//NamedElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeriveReqt" eSuperTypes="l2.ecore#//Trace"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Copy" eSuperTypes="l2.ecore#//Trace"/>
+  </eSubpackages>
+  <eSubpackages name="activities" nsURI="http:///sysMl/activities.ecore" nsPrefix="sysMl.activities">
+    <eClassifiers xsi:type="ecore:EClass" name="Probability">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="probability" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ValueSpecification"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseActivityEdge" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ActivityEdge"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseParameterSet" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ParameterSet"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Optional">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseParameter" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Parameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NoBuffer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseObjectNode" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ObjectNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rate">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rate" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//InstanceSpecification"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseParameter" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Parameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseActivityEdge" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ActivityEdge"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ControlOperator">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseBehavior" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Behavior"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseOperation" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Operation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Continuous" eSuperTypes="#//activities/Rate"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Overwrite">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseObjectNode" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//ObjectNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Discrete" eSuperTypes="#//activities/Rate"/>
+  </eSubpackages>
+  <eSubpackages name="modelElements" nsURI="http:///sysMl/modelElements.ecore" nsPrefix="sysMl.modelElements">
+    <eClassifiers xsi:type="ecore:EClass" name="Viewpoint">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="stakeholders" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="languages" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="methods" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" ordered="false"
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="concerns" ordered="false"
+          lowerBound="1" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseClass" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rationale">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseComment" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Comment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Conform">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseDependency" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Dependency"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="View">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="viewPoint" ordered="false"
+          lowerBound="1" eType="#//modelElements/Viewpoint" volatile="true" transient="true"
+          derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="basePackage" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Package"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Problem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseComment" ordered="false"
+          lowerBound="1" eType="ecore:EClass uml.ecore#//Comment"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="libraries" nsURI="http:///sysMl/libraries.ecore" nsPrefix="sysMl.libraries">
+    <eSubpackages name="primitiveValueTypes" nsURI="http:///sysMl/libraries/primitiveValueTypes.ecore"
+        nsPrefix="sysMl.libraries.primitiveValueTypes">
+      <eClassifiers xsi:type="ecore:EClass" name="Real" eSuperTypes="#//libraries/primitiveValueTypes/Number"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Number"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Boolean"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//libraries/primitiveValueTypes/Number"/>
+      <eClassifiers xsi:type="ecore:EClass" name="String"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//libraries/primitiveValueTypes/Number">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="realPart" ordered="false"
+            lowerBound="1" eType="#//libraries/primitiveValueTypes/Real" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="imaginaryPart" ordered="false"
+            lowerBound="1" eType="#//libraries/primitiveValueTypes/Real" containment="true"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="controlValues" nsURI="http:///sysMl/libraries/controlValues.ecore"
+        nsPrefix="sysMl.libraries.controlValues">
+      <eClassifiers xsi:type="ecore:EEnum" name="ControlValue">
+        <eLiterals name="disable"/>
+        <eLiterals name="enable" value="1"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

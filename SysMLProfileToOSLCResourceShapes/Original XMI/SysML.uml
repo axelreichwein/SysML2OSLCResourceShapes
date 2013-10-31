@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:mofext="http://www.omg.org/spec/MOF/20110701" xmlns:sysml="http://www.omg.org/spec/SysML/20120322/SysML" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML">
+  <uml:Profile xmi:id="_SysML__0" name="SysML" URI="http://www.omg.org/spec/SysML/20120322/SysML" metamodelReference="_SysML_packageImport__PackageImport._SysML__0._UML__0">
+    <packageImport xmi:id="_SysML_packageImport__PackageImport._SysML__0._UML__0">
+      <importedPackage href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_SysML_packageImport__PackageImport._SysML__0._StandardProfileL2__0">
+      <importedPackage href="pathmap://UML_PROFILES/StandardL2.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Ports_u0026Flows_PackageableElement" name="Ports&amp;Flows">
+      <packageImport xmi:id="_SysML_Ports_u0026Flows_PackageableElement-packageImport__PackageImport._SysML_Ports_u0026Flows_PackageableElement._SysML_Blocks_PackageableElement" importedPackage="_SysML_Blocks_PackageableElement"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowDirection_PackageableElement" name="FlowDirection">
+        <ownedLiteral xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowDirection_PackageableElement-in_EnumerationLiteral" name="in"/>
+        <ownedLiteral xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowDirection_PackageableElement-out_EnumerationLiteral" name="out"/>
+        <ownedLiteral xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowDirection_PackageableElement-inout_EnumerationLiteral" name="inout"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FullPort_PackageableElement" name="FullPort">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FullPort_PackageableElement-base_Port_Property" name="base_Port" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ProxyPort_PackageableElement" name="ProxyPort">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ProxyPort_PackageableElement-base_Port_Property" name="base_Port" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement" name="E_base_Port_extension_FullPort" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement-extension_FullPort_Property _SysML_Ports_u0026Flows_PackageableElement-FullPort_PackageableElement-base_Port_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement-extension_FullPort_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement-extension_FullPort_Property" name="extension_FullPort" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-FullPort_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_FullPort_PackageableElement-extension_FullPort_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement" name="E_base_Port_extension_ProxyPort" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement-extension_ProxyPort_Property _SysML_Ports_u0026Flows_PackageableElement-ProxyPort_PackageableElement-base_Port_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement-extension_ProxyPort_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement-extension_ProxyPort_Property" name="extension_ProxyPort" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-ProxyPort_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Port_extension_ProxyPort_PackageableElement-extension_ProxyPort_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowProperty_PackageableElement" name="FlowProperty">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowProperty_PackageableElement-direction_Property" name="direction" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-FlowDirection_PackageableElement"/>
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FlowProperty_PackageableElement-base_Property_Property" name="base_Property" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ItemFlow_PackageableElement" name="ItemFlow">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ItemFlow_PackageableElement-itemProperty_Property" name="itemProperty" visibility="public">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ItemFlow_PackageableElement-itemProperty_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ItemFlow_PackageableElement-base_InformationFlow_Property" name="base_InformationFlow" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InformationFlow"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-InterfaceBlock_PackageableElement" name="InterfaceBlock">
+        <generalization xmi:id="_SysML_Ports_u0026Flows_PackageableElement-InterfaceBlock_PackageableElement-generalization__Generalization._SysML_Ports_u0026Flows_PackageableElement-InterfaceBlock_PackageableElement._SysML_Blocks_PackageableElement-Block_PackageableElement" general="_SysML_Blocks_PackageableElement-Block_PackageableElement"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement" name="InvocationOnNestedPortAction">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement-base_InvocationAction_Property" name="base_InvocationAction" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InvocationAction"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement-onNestedPort_Property" name="onNestedPort" visibility="public" isOrdered="true" isUnique="false" association="_SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement-onNestedPort_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement" name="TriggerOnNestedPort">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement-base_Trigger_Property" name="base_Trigger" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Trigger"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement-onNestedPort_Property" name="onNestedPort" visibility="public" isOrdered="true" isUnique="false" association="_SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement-onNestedPort_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-AcceptChangeStructuralFeatureEventAction_PackageableElement" name="AcceptChangeStructuralFeatureEventAction">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-AcceptChangeStructuralFeatureEventAction_PackageableElement-base_AcceptEventAction_Property" name="base_AcceptEventAction" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#AcceptEventAction"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement" name="ChangeStructuralFeatureEvent">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement-base_ChangeEvent_Property" name="base_ChangeEvent" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ChangeEvent"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement-structuralFeature_Property" name="structuralFeature" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuralFeature"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-DirectedFeature_PackageableElement" name="DirectedFeature">
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-DirectedFeature_PackageableElement-featureDirection_Property" name="featureDirection" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-FeatureDirection_PackageableElement"/>
+        <ownedAttribute xmi:id="_SysML_Ports_u0026Flows_PackageableElement-DirectedFeature_PackageableElement-base_Feature_Property" name="base_Feature" visibility="public" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Feature"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FeatureDirection_PackageableElement" name="FeatureDirection">
+        <ownedLiteral xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FeatureDirection_PackageableElement-provided_EnumerationLiteral" name="provided"/>
+        <ownedLiteral xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FeatureDirection_PackageableElement-required_EnumerationLiteral" name="required"/>
+        <ownedLiteral xmi:id="_SysML_Ports_u0026Flows_PackageableElement-FeatureDirection_PackageableElement-providedRequired_EnumerationLiteral" name="providedRequired"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement" name="E_base_InformationFlow_extension_ItemFlow" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement-extension_ItemFlow_Property _SysML_Ports_u0026Flows_PackageableElement-ItemFlow_PackageableElement-base_InformationFlow_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement-extension_ItemFlow_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement-extension_ItemFlow_Property" name="extension_ItemFlow" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-ItemFlow_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_InformationFlow_extension_ItemFlow_PackageableElement-extension_ItemFlow_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement" name="E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement-extension_AcceptChangeStructuralFeatureEventAction_Property _SysML_Ports_u0026Flows_PackageableElement-AcceptChangeStructuralFeatureEventAction_PackageableElement-base_AcceptEventAction_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement-extension_AcceptChangeStructuralFeatureEventAction_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement-extension_AcceptChangeStructuralFeatureEventAction_Property" name="extension_AcceptChangeStructuralFeatureEventAction" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-AcceptChangeStructuralFeatureEventAction_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_AcceptEventAction_extension_AcceptChangeStructuralFeatureEventAction_PackageableElement-extension_AcceptChangeStructuralFeatureEventAction_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement" name="E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement-extension_ChangeStructuralFeatureEvent_Property _SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement-base_ChangeEvent_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement-extension_ChangeStructuralFeatureEvent_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement-extension_ChangeStructuralFeatureEvent_Property" name="extension_ChangeStructuralFeatureEvent" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_ChangeEvent_extension_ChangeStructuralFeatureEvent_PackageableElement-extension_ChangeStructuralFeatureEvent_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement" name="A_changeStructuralFeatureEvent_structuralFeature" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement-structuralFeature_Property _SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement-changeStructuralFeatureEvent_Property">
+        <ownedEnd xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement-changeStructuralFeatureEvent_Property" name="changeStructuralFeatureEvent" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-ChangeStructuralFeatureEvent_PackageableElement" association="_SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement-changeStructuralFeatureEvent_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_changeStructuralFeatureEvent_structuralFeature_PackageableElement-changeStructuralFeatureEvent_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement" name="E_base_Feature_extension_DirectedFeature" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement-extension_DirectedFeature_Property _SysML_Ports_u0026Flows_PackageableElement-DirectedFeature_PackageableElement-base_Feature_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement-extension_DirectedFeature_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement-extension_DirectedFeature_Property" name="extension_DirectedFeature" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-DirectedFeature_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Feature_extension_DirectedFeature_PackageableElement-extension_DirectedFeature_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement" name="E_base_InvocationAction_extension_InvocationOnNestedPortAction" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement-extension_InvocationOnNestedPortAction_Property _SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement-base_InvocationAction_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement-extension_InvocationOnNestedPortAction_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement-extension_InvocationOnNestedPortAction_Property" name="extension_InvocationOnNestedPortAction" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_InvocationAction_extension_InvocationOnNestedPortAction_PackageableElement-extension_InvocationOnNestedPortAction_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement" name="E_base_Trigger_extension_TriggerOnNestedPort" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement-extension_TriggerOnNestedPort_Property _SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement-base_Trigger_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement-extension_TriggerOnNestedPort_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement-extension_TriggerOnNestedPort_Property" name="extension_TriggerOnNestedPort" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Trigger_extension_TriggerOnNestedPort_PackageableElement-extension_TriggerOnNestedPort_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement" name="A_invocationOnNestedPortAction_onNestedPort" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement-onNestedPort_Property _SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement-invocationOnNestedPortAction_Property">
+        <ownedEnd xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement-invocationOnNestedPortAction_Property" name="invocationOnNestedPortAction" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-InvocationOnNestedPortAction_PackageableElement" association="_SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement-invocationOnNestedPortAction_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_invocationOnNestedPortAction_onNestedPort_PackageableElement-invocationOnNestedPortAction_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement" name="A_triggerOnNestedPort_onNestedPort" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement-onNestedPort_Property _SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement-triggerOnNestedPort_Property">
+        <ownedEnd xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement-triggerOnNestedPort_Property" name="triggerOnNestedPort" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-TriggerOnNestedPort_PackageableElement" association="_SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement-triggerOnNestedPort_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-A_triggerOnNestedPort_onNestedPort_PackageableElement-triggerOnNestedPort_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement" name="E_base_Property_extension_FlowProperty" memberEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement-extension_FlowProperty_Property _SysML_Ports_u0026Flows_PackageableElement-FlowProperty_PackageableElement-base_Property_Property" navigableOwnedEnd="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement-extension_FlowProperty_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement-extension_FlowProperty_Property" name="extension_FlowProperty" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-FlowProperty_PackageableElement" aggregation="composite" association="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Ports_u0026Flows_PackageableElement-E_base_Property_extension_FlowProperty_PackageableElement-extension_FlowProperty_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_DeprecatedElements_PackageableElement" name="DeprecatedElements">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_DeprecatedElements_PackageableElement-FlowPort_PackageableElement" name="FlowPort">
+        <ownedAttribute xmi:id="_SysML_DeprecatedElements_PackageableElement-FlowPort_PackageableElement-isAtomic_Property" name="isAtomic" visibility="public" isDerived="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_DeprecatedElements_PackageableElement-FlowPort_PackageableElement-direction_Property" name="direction" visibility="public" type="_SysML_Ports_u0026Flows_PackageableElement-FlowDirection_PackageableElement"/>
+        <ownedAttribute xmi:id="_SysML_DeprecatedElements_PackageableElement-FlowPort_PackageableElement-base_Port_Property" name="base_Port" visibility="public" association="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement" name="E_base_Port_extension_" memberEnd="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement-extension_FlowPort_Property _SysML_DeprecatedElements_PackageableElement-FlowPort_PackageableElement-base_Port_Property" navigableOwnedEnd="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement-extension_FlowPort_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement-extension_FlowPort_Property" name="extension_FlowPort" visibility="public" type="_SysML_DeprecatedElements_PackageableElement-FlowPort_PackageableElement" aggregation="composite" association="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_DeprecatedElements_PackageableElement-E_base_Port_extension__PackageableElement-extension_FlowPort_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_DeprecatedElements_PackageableElement-FlowSpecification_PackageableElement" name="FlowSpecification">
+        <ownedAttribute xmi:id="_SysML_DeprecatedElements_PackageableElement-FlowSpecification_PackageableElement-base_Interface_Property" name="base_Interface" visibility="public" association="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interface"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement" name="E_base_Interface_extension_" memberEnd="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement-extension_FlowSpecification_Property _SysML_DeprecatedElements_PackageableElement-FlowSpecification_PackageableElement-base_Interface_Property" navigableOwnedEnd="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement-extension_FlowSpecification_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement-extension_FlowSpecification_Property" name="extension_FlowSpecification" visibility="public" type="_SysML_DeprecatedElements_PackageableElement-FlowSpecification_PackageableElement" aggregation="composite" association="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_DeprecatedElements_PackageableElement-E_base_Interface_extension__PackageableElement-extension_FlowSpecification_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Allocations_PackageableElement" name="Allocations">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Allocations_PackageableElement-AllocateActivityPartition_PackageableElement" name="AllocateActivityPartition">
+        <ownedAttribute xmi:id="_SysML_Allocations_PackageableElement-AllocateActivityPartition_PackageableElement-base_ActivityPartition_Property" name="base_ActivityPartition" visibility="public" association="_SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ActivityPartition"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Allocations_PackageableElement-Allocate_PackageableElement" name="Allocate">
+        <ownedAttribute xmi:id="_SysML_Allocations_PackageableElement-Allocate_PackageableElement-base_Abstraction_Property" name="base_Abstraction" visibility="public" association="_SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Abstraction"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement" name="Allocated">
+        <ownedAttribute xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-allocatedFrom_Property" name="allocatedFrom" visibility="public" isDerived="true">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-allocatedFrom_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-allocatedFrom_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-allocatedTo_Property" name="allocatedTo" visibility="public" isDerived="true">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-allocatedTo_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-allocatedTo_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-base_NamedElement_Property" name="base_NamedElement" visibility="public" association="_SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement" name="E_extension_AllocateActivityPartition_base_ActivityPartition" memberEnd="_SysML_Allocations_PackageableElement-AllocateActivityPartition_PackageableElement-base_ActivityPartition_Property _SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement-extension_AllocateActivityPartition_Property" navigableOwnedEnd="_SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement-extension_AllocateActivityPartition_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement-extension_AllocateActivityPartition_Property" name="extension_AllocateActivityPartition" visibility="public" type="_SysML_Allocations_PackageableElement-AllocateActivityPartition_PackageableElement" aggregation="composite" association="_SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Allocations_PackageableElement-E_extension_AllocateActivityPartition_base_ActivityPartition_PackageableElement-extension_AllocateActivityPartition_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement" name="E_extension_Allocate_base_Abstraction" memberEnd="_SysML_Allocations_PackageableElement-Allocate_PackageableElement-base_Abstraction_Property _SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement-extension_Allocate_Property" navigableOwnedEnd="_SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement-extension_Allocate_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement-extension_Allocate_Property" name="extension_Allocate" visibility="public" type="_SysML_Allocations_PackageableElement-Allocate_PackageableElement" aggregation="composite" association="_SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Allocations_PackageableElement-E_extension_Allocate_base_Abstraction_PackageableElement-extension_Allocate_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement" name="E_extension_Allocated_base_NamedElement" memberEnd="_SysML_Allocations_PackageableElement-Allocated_PackageableElement-base_NamedElement_Property _SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement-extension_Allocated_Property" navigableOwnedEnd="_SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement-extension_Allocated_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement-extension_Allocated_Property" name="extension_Allocated" visibility="public" type="_SysML_Allocations_PackageableElement-Allocated_PackageableElement" aggregation="composite" association="_SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Allocations_PackageableElement-E_extension_Allocated_base_NamedElement_PackageableElement-extension_Allocated_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Blocks_PackageableElement" name="Blocks">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-DistributedProperty_PackageableElement" name="DistributedProperty">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-DistributedProperty_PackageableElement-base_Property_Property" name="base_Property" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-PropertySpecificType_PackageableElement" name="PropertySpecificType">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-PropertySpecificType_PackageableElement-base_Classifier_Property" name="base_Classifier" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-ParticipantProperty_PackageableElement" name="ParticipantProperty">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ParticipantProperty_PackageableElement-end_Property" name="end" visibility="public">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ParticipantProperty_PackageableElement-base_Property_Property" name="base_Property" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-ValueType_PackageableElement" name="ValueType">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-quantityKind_Property" name="quantityKind" visibility="public" type="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement" association="_SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-quantityKind_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-unit_Property" name="unit" visibility="public" type="_SysML_Blocks_PackageableElement-Unit_PackageableElement" association="_SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-unit_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-base_DataType_Property" name="base_DataType" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement" name="QuantityKind">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-symbol_Property" name="symbol" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-symbol_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-description_Property" name="description" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-description_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-definitionURI_Property" name="definitionURI" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-definitionURI_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-base_InstanceSpecification_Property" name="base_InstanceSpecification" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InstanceSpecification"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-Block_PackageableElement" name="Block">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Block_PackageableElement-isEncapsulated_Property" name="isEncapsulated" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-Block_PackageableElement-isEncapsulated_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Block_PackageableElement-base_Class_Property" name="base_Class" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-ConnectorProperty_PackageableElement" name="ConnectorProperty">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ConnectorProperty_PackageableElement-connector_Property" name="connector" visibility="public">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-ConnectorProperty_PackageableElement-base_Property_Property" name="base_Property" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement" name="Unit">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-quantityKind_Property" name="quantityKind" visibility="public" type="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement" association="_SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-quantityKind_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-symbol_Property" name="symbol" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-symbol_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-description_Property" name="description" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-description_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-definitionURI_Property" name="definitionURI" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-definitionURI_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-Unit_PackageableElement-base_InstanceSpecification_Property" name="base_InstanceSpecification" visibility="public" association="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InstanceSpecification"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-NestedConnectorEnd_PackageableElement" name="NestedConnectorEnd">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-NestedConnectorEnd_PackageableElement-propertyPath_Property" name="propertyPath" visibility="public" isOrdered="true" isUnique="false">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Blocks_PackageableElement-NestedConnectorEnd_PackageableElement-propertyPath_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-NestedConnectorEnd_PackageableElement-base_ConnectorEnd_Property" name="base_ConnectorEnd" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Blocks_PackageableElement-BindingConnector_PackageableElement" name="BindingConnector">
+        <ownedAttribute xmi:id="_SysML_Blocks_PackageableElement-BindingConnector_PackageableElement-base_Connector_Property" name="base_Connector" visibility="public" association="_SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement" name="A_valueType_unit" memberEnd="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-unit_Property _SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement-valueType_Property">
+        <ownedEnd xmi:id="_SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement-valueType_Property" name="valueType" visibility="public" type="_SysML_Blocks_PackageableElement-ValueType_PackageableElement" association="_SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement-valueType_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Blocks_PackageableElement-A_valueType_unit_PackageableElement-valueType_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement" name="A_valueType_quantityKind" memberEnd="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-quantityKind_Property _SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement-valueType_Property">
+        <ownedEnd xmi:id="_SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement-valueType_Property" name="valueType" visibility="public" type="_SysML_Blocks_PackageableElement-ValueType_PackageableElement" association="_SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement-valueType_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Blocks_PackageableElement-A_valueType_quantityKind_PackageableElement-valueType_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement" name="A_unit_quantityKind" memberEnd="_SysML_Blocks_PackageableElement-Unit_PackageableElement-quantityKind_Property _SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement-unit_Property">
+        <ownedEnd xmi:id="_SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement-unit_Property" name="unit" visibility="public" type="_SysML_Blocks_PackageableElement-Unit_PackageableElement" association="_SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement-unit_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Blocks_PackageableElement-A_unit_quantityKind_PackageableElement-unit_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement" name="E_extension_Block_base_Class" memberEnd="_SysML_Blocks_PackageableElement-Block_PackageableElement-base_Class_Property _SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement-extension_Block_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement-extension_Block_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement-extension_Block_Property" name="extension_Block" visibility="public" type="_SysML_Blocks_PackageableElement-Block_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_Block_base_Class_PackageableElement-extension_Block_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement" name="E_extension_PropertySpecificType_base_Classifier" memberEnd="_SysML_Blocks_PackageableElement-PropertySpecificType_PackageableElement-base_Classifier_Property _SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement-extension_PropertySpecificType_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement-extension_PropertySpecificType_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement-extension_PropertySpecificType_Property" name="extension_PropertySpecificType" visibility="public" type="_SysML_Blocks_PackageableElement-PropertySpecificType_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_PropertySpecificType_base_Classifier_PackageableElement-extension_PropertySpecificType_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement" name="E_extension_NestedConnectorEnd_base_ConnectorEnd" memberEnd="_SysML_Blocks_PackageableElement-NestedConnectorEnd_PackageableElement-base_ConnectorEnd_Property _SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement-extension_NestedConnectorEnd_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement-extension_NestedConnectorEnd_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement-extension_NestedConnectorEnd_Property" name="extension_NestedConnectorEnd" visibility="public" type="_SysML_Blocks_PackageableElement-NestedConnectorEnd_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_NestedConnectorEnd_base_ConnectorEnd_PackageableElement-extension_NestedConnectorEnd_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement" name="E_extension_BindingConnector_base_Connector" memberEnd="_SysML_Blocks_PackageableElement-BindingConnector_PackageableElement-base_Connector_Property _SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement-extension_BindingConnector_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement-extension_BindingConnector_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement-extension_BindingConnector_Property" name="extension_BindingConnector" visibility="public" type="_SysML_Blocks_PackageableElement-BindingConnector_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_BindingConnector_base_Connector_PackageableElement-extension_BindingConnector_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement" name="E_extension_ValueType_base_DataType" memberEnd="_SysML_Blocks_PackageableElement-ValueType_PackageableElement-base_DataType_Property _SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement-extension_ValueType_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement-extension_ValueType_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement-extension_ValueType_Property" name="extension_ValueType" visibility="public" type="_SysML_Blocks_PackageableElement-ValueType_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ValueType_base_DataType_PackageableElement-extension_ValueType_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement" name="E_base_InstanceSpecification_extension_Unit" memberEnd="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement-extension_Unit_Property _SysML_Blocks_PackageableElement-Unit_PackageableElement-base_InstanceSpecification_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement-extension_Unit_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement-extension_Unit_Property" name="extension_Unit" visibility="public" type="_SysML_Blocks_PackageableElement-Unit_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_base_InstanceSpecification_extension_Unit_PackageableElement-extension_Unit_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement" name="E_extension_QuantityKind_base_InstanceSpecification" memberEnd="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement-base_InstanceSpecification_Property _SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement-extension_QuantityKind_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement-extension_QuantityKind_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement-extension_QuantityKind_Property" name="extension_QuantityKind" visibility="public" type="_SysML_Blocks_PackageableElement-QuantityKind_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_QuantityKind_base_InstanceSpecification_PackageableElement-extension_QuantityKind_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement" name="E_extension_DistributedProperty_base_Property" memberEnd="_SysML_Blocks_PackageableElement-DistributedProperty_PackageableElement-base_Property_Property _SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement-extension_DistributedProperty_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement-extension_DistributedProperty_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement-extension_DistributedProperty_Property" name="extension_DistributedProperty" visibility="public" type="_SysML_Blocks_PackageableElement-DistributedProperty_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_DistributedProperty_base_Property_PackageableElement-extension_DistributedProperty_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement" name="E_extension_ParticipantProperty_base_Property" memberEnd="_SysML_Blocks_PackageableElement-ParticipantProperty_PackageableElement-base_Property_Property _SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement-extension_ParticipantProperty_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement-extension_ParticipantProperty_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement-extension_ParticipantProperty_Property" name="extension_ParticipantProperty" visibility="public" type="_SysML_Blocks_PackageableElement-ParticipantProperty_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ParticipantProperty_base_Property_PackageableElement-extension_ParticipantProperty_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement" name="E_extension_ConnectorProperty_base_Property" memberEnd="_SysML_Blocks_PackageableElement-ConnectorProperty_PackageableElement-base_Property_Property _SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement-extension_ConnectorProperty_Property" navigableOwnedEnd="_SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement-extension_ConnectorProperty_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement-extension_ConnectorProperty_Property" name="extension_ConnectorProperty" visibility="public" type="_SysML_Blocks_PackageableElement-ConnectorProperty_PackageableElement" aggregation="composite" association="_SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Blocks_PackageableElement-E_extension_ConnectorProperty_base_Property_PackageableElement-extension_ConnectorProperty_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_ConstraintBlocks_PackageableElement" name="ConstraintBlocks">
+      <packageImport xmi:id="_SysML_ConstraintBlocks_PackageableElement-packageImport__PackageImport._SysML_ConstraintBlocks_PackageableElement._SysML_Blocks_PackageableElement" importedPackage="_SysML_Blocks_PackageableElement"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ConstraintBlocks_PackageableElement-ConstraintBlock_PackageableElement" name="ConstraintBlock">
+        <generalization xmi:id="_SysML_ConstraintBlocks_PackageableElement-ConstraintBlock_PackageableElement-generalization__Generalization._SysML_ConstraintBlocks_PackageableElement-ConstraintBlock_PackageableElement._SysML_Blocks_PackageableElement-Block_PackageableElement" general="_SysML_Blocks_PackageableElement-Block_PackageableElement" isSubstitutable="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ConstraintBlocks_PackageableElement-ConstraintProperty_PackageableElement" name="ConstraintProperty">
+        <ownedAttribute xmi:id="_SysML_ConstraintBlocks_PackageableElement-ConstraintProperty_PackageableElement-base_Property_Property" name="base_Property" visibility="public" association="_SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement" name="E_extension_ConstraintProperty_base_Property" memberEnd="_SysML_ConstraintBlocks_PackageableElement-ConstraintProperty_PackageableElement-base_Property_Property _SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement-extension_ConstraintProperty_Property" navigableOwnedEnd="_SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement-extension_ConstraintProperty_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement-extension_ConstraintProperty_Property" name="extension_ConstraintProperty" visibility="public" type="_SysML_ConstraintBlocks_PackageableElement-ConstraintProperty_PackageableElement" aggregation="composite" association="_SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_ConstraintBlocks_PackageableElement-E_extension_ConstraintProperty_base_Property_PackageableElement-extension_ConstraintProperty_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Requirements_PackageableElement" name="Requirements">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" name="Requirement">
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-text_Property" name="text" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-id_Property" name="id" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-derived_Property" name="derived" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-derived_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-derived_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-derivedFrom_Property" name="derivedFrom" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-derivedFrom_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-derivedFrom_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-satisfiedBy_Property" name="satisfiedBy" visibility="public" isDerived="true">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-satisfiedBy_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-satisfiedBy_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-refinedBy_Property" name="refinedBy" visibility="public" isDerived="true">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-refinedBy_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-refinedBy_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-tracedTo_Property" name="tracedTo" visibility="public" isDerived="true">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-tracedTo_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-tracedTo_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-verifiedBy_Property" name="verifiedBy" visibility="public" isDerived="true">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-verifiedBy_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-verifiedBy_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-master_Property" name="master" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-master_Property-lowerValue__ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-Requirement_PackageableElement-base_Class_Property" name="base_Class" visibility="public" association="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-Verify_PackageableElement" name="Verify">
+        <generalization xmi:id="_SysML_Requirements_PackageableElement-Verify_PackageableElement-generalization__Generalization._SysML_Requirements_PackageableElement-Verify_PackageableElement._StandardProfileL2_Trace" isSubstitutable="false">
+        	<general xmi:type="uml:Stereotype" href="pathmap://UML_PROFILES/StandardL2.profile.uml#Trace"/>
+        </generalization> 
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-TestCase_PackageableElement" name="TestCase">
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-TestCase_PackageableElement-base_Operation_Property" name="base_Operation" visibility="public" association="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-TestCase_PackageableElement-base_Behavior_Property" name="base_Behavior" visibility="public" association="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-Satisfy_PackageableElement" name="Satisfy">
+        <generalization xmi:id="_SysML_Requirements_PackageableElement-Satisfy_PackageableElement-generalization__Generalization._SysML_Requirements_PackageableElement-Satisfy_PackageableElement._StandardProfileL2_Trace">
+        	<general xmi:type="uml:Stereotype" href="pathmap://UML_PROFILES/StandardL2.profile.uml#Trace"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_SysML_Requirements_PackageableElement-VerdictKind_PackageableElement" name="VerdictKind">
+        <ownedLiteral xmi:id="_SysML_Requirements_PackageableElement-VerdictKind_PackageableElement-pass_EnumerationLiteral" name="pass"/>
+        <ownedLiteral xmi:id="_SysML_Requirements_PackageableElement-VerdictKind_PackageableElement-fail_EnumerationLiteral" name="fail"/>
+        <ownedLiteral xmi:id="_SysML_Requirements_PackageableElement-VerdictKind_PackageableElement-inconclusive_EnumerationLiteral" name="inconclusive"/>
+        <ownedLiteral xmi:id="_SysML_Requirements_PackageableElement-VerdictKind_PackageableElement-error_EnumerationLiteral" name="error"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement" name="RequirementRelated">
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-tracedFrom_Property" name="tracedFrom" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-tracedFrom_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-tracedFrom_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-satisfies_Property" name="satisfies" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-satisfies_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-satisfies_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-refines_Property" name="refines" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-refines_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-refines_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-verifies_Property" name="verifies" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" isDerived="true">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-verifies_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-verifies_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-base_NamedElement_Property" name="base_NamedElement" visibility="public" association="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-DeriveReqt_PackageableElement" name="DeriveReqt">
+        <generalization xmi:id="_SysML_Requirements_PackageableElement-DeriveReqt_PackageableElement-generalization__Generalization._SysML_Requirements_PackageableElement-DeriveReqt_PackageableElement._StandardProfileL2_Trace" isSubstitutable="false">
+        	<general xmi:type="uml:Stereotype" href="pathmap://UML_PROFILES/StandardL2.profile.uml#Trace"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Requirements_PackageableElement-Copy_PackageableElement" name="Copy">
+        <generalization xmi:id="_SysML_Requirements_PackageableElement-Copy_PackageableElement-generalization__Generalization._SysML_Requirements_PackageableElement-Copy_PackageableElement._StandardProfileL2_Trace" isSubstitutable="false">
+        	<general xmi:type="uml:Stereotype" href="pathmap://UML_PROFILES/StandardL2.profile.uml#Trace"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement" name="E_base_Class_extension_Requirement" memberEnd="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement-extension_Requirement_Property _SysML_Requirements_PackageableElement-Requirement_PackageableElement-base_Class_Property" navigableOwnedEnd="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement-extension_Requirement_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement-extension_Requirement_Property" name="extension_Requirement" visibility="public" type="_SysML_Requirements_PackageableElement-Requirement_PackageableElement" aggregation="composite" association="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Requirements_PackageableElement-E_base_Class_extension_Requirement_PackageableElement-extension_Requirement_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement" name="E_base_Operation_extension_TestCase" memberEnd="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement-extension_TestCase_Property _SysML_Requirements_PackageableElement-TestCase_PackageableElement-base_Operation_Property" navigableOwnedEnd="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement-extension_TestCase_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement-extension_TestCase_Property" name="extension_TestCase" visibility="public" type="_SysML_Requirements_PackageableElement-TestCase_PackageableElement" aggregation="composite" association="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Requirements_PackageableElement-E_base_Operation_extension_TestCase_PackageableElement-extension_TestCase_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement" name="E_base_Behavior_extension_TestCase" memberEnd="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement-extension_TestCase_Property _SysML_Requirements_PackageableElement-TestCase_PackageableElement-base_Behavior_Property" navigableOwnedEnd="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement-extension_TestCase_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement-extension_TestCase_Property" name="extension_TestCase" visibility="public" type="_SysML_Requirements_PackageableElement-TestCase_PackageableElement" aggregation="composite" association="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Requirements_PackageableElement-E_base_Behavior_extension_TestCase_PackageableElement-extension_TestCase_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement" name="E_base_NamedElement_extension_RequirementRelated" memberEnd="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement-extension_RequirementRelated_Property _SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement-base_NamedElement_Property" navigableOwnedEnd="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement-extension_RequirementRelated_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement-extension_RequirementRelated_Property" name="extension_RequirementRelated" visibility="public" type="_SysML_Requirements_PackageableElement-RequirementRelated_PackageableElement" aggregation="composite" association="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Requirements_PackageableElement-E_base_NamedElement_extension_RequirementRelated_PackageableElement-extension_RequirementRelated_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Activities_PackageableElement" name="Activities">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-Probability_PackageableElement" name="Probability">
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Probability_PackageableElement-probability_Property" name="probability" visibility="public">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Probability_PackageableElement-base_ActivityEdge_Property" name="base_ActivityEdge" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ActivityEdge"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Probability_PackageableElement-base_ParameterSet_Property" name="base_ParameterSet" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ParameterSet"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-Optional_PackageableElement" name="Optional">
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Optional_PackageableElement-base_Parameter_Property" name="base_Parameter" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-NoBuffer_PackageableElement" name="NoBuffer">
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-NoBuffer_PackageableElement-base_ObjectNode_Property" name="base_ObjectNode" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ObjectNode"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-Rate_PackageableElement" name="Rate">
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Rate_PackageableElement-rate_Property" name="rate" visibility="public">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InstanceSpecification"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Rate_PackageableElement-base_Parameter_Property" name="base_Parameter" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Rate_PackageableElement-base_ActivityEdge_Property" name="base_ActivityEdge" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ActivityEdge"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement" name="ControlOperator">
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement-base_Behavior_Property" name="base_Behavior" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement-base_Operation_Property" name="base_Operation" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-Continuous_PackageableElement" name="Continuous">
+        <generalization xmi:id="_SysML_Activities_PackageableElement-Continuous_PackageableElement-generalization__Generalization._SysML_Activities_PackageableElement-Continuous_PackageableElement._SysML_Activities_PackageableElement-Rate_PackageableElement" general="_SysML_Activities_PackageableElement-Rate_PackageableElement" isSubstitutable="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-Overwrite_PackageableElement" name="Overwrite">
+        <ownedAttribute xmi:id="_SysML_Activities_PackageableElement-Overwrite_PackageableElement-base_ObjectNode_Property" name="base_ObjectNode" visibility="public" association="_SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ObjectNode"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_Activities_PackageableElement-Discrete_PackageableElement" name="Discrete">
+        <generalization xmi:id="_SysML_Activities_PackageableElement-Discrete_PackageableElement-generalization__Generalization._SysML_Activities_PackageableElement-Discrete_PackageableElement._SysML_Activities_PackageableElement-Rate_PackageableElement" general="_SysML_Activities_PackageableElement-Rate_PackageableElement" isSubstitutable="false"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement" name="E_extension_Optional_base_Parameter" memberEnd="_SysML_Activities_PackageableElement-Optional_PackageableElement-base_Parameter_Property _SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement-extension_Optional_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement-extension_Optional_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement-extension_Optional_Property" name="extension_Optional" visibility="public" type="_SysML_Activities_PackageableElement-Optional_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_Optional_base_Parameter_PackageableElement-extension_Optional_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement" name="E_extension_Rate_base_Parameter" memberEnd="_SysML_Activities_PackageableElement-Rate_PackageableElement-base_Parameter_Property _SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement-extension_Rate_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement-extension_Rate_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement-extension_Rate_Property" name="extension_Rate" visibility="public" type="_SysML_Activities_PackageableElement-Rate_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_Rate_base_Parameter_PackageableElement-extension_Rate_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement" name="E_extension_Rate_base_ActivityEdge" memberEnd="_SysML_Activities_PackageableElement-Rate_PackageableElement-base_ActivityEdge_Property _SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement-extension_Rate_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement-extension_Rate_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement-extension_Rate_Property" name="extension_Rate" visibility="public" type="_SysML_Activities_PackageableElement-Rate_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_Rate_base_ActivityEdge_PackageableElement-extension_Rate_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement" name="E_extension_Probability_base_ActivityEdge" memberEnd="_SysML_Activities_PackageableElement-Probability_PackageableElement-base_ActivityEdge_Property _SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement-extension_Probability_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement-extension_Probability_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement-extension_Probability_Property" name="extension_Probability" visibility="public" type="_SysML_Activities_PackageableElement-Probability_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_Probability_base_ActivityEdge_PackageableElement-extension_Probability_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement" name="E_extension_Probability_base_ParameterSet" memberEnd="_SysML_Activities_PackageableElement-Probability_PackageableElement-base_ParameterSet_Property _SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement-extension_Probability_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement-extension_Probability_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement-extension_Probability_Property" name="extension_Probability" visibility="public" type="_SysML_Activities_PackageableElement-Probability_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_Probability_base_ParameterSet_PackageableElement-extension_Probability_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement" name="E_extension_ControlOperator_base_Behavior" memberEnd="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement-base_Behavior_Property _SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement-extension_ControlOperator_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement-extension_ControlOperator_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement-extension_ControlOperator_Property" name="extension_ControlOperator" visibility="public" type="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Behavior_PackageableElement-extension_ControlOperator_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement" name="E_extension_ControlOperator_base_Operation" memberEnd="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement-base_Operation_Property _SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement-extension_ControlOperator_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement-extension_ControlOperator_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement-extension_ControlOperator_Property" name="extension_ControlOperator" visibility="public" type="_SysML_Activities_PackageableElement-ControlOperator_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_ControlOperator_base_Operation_PackageableElement-extension_ControlOperator_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement" name="E_extension_NoBuffer_base_ObjectNode" memberEnd="_SysML_Activities_PackageableElement-NoBuffer_PackageableElement-base_ObjectNode_Property _SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement-extension_NoBuffer_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement-extension_NoBuffer_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement-extension_NoBuffer_Property" name="extension_NoBuffer" visibility="public" type="_SysML_Activities_PackageableElement-NoBuffer_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_NoBuffer_base_ObjectNode_PackageableElement-extension_NoBuffer_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement" name="E_extension_Overwrite_base_ObjectNode" memberEnd="_SysML_Activities_PackageableElement-Overwrite_PackageableElement-base_ObjectNode_Property _SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement-extension_Overwrite_Property" navigableOwnedEnd="_SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement-extension_Overwrite_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement-extension_Overwrite_Property" name="extension_Overwrite" visibility="public" type="_SysML_Activities_PackageableElement-Overwrite_PackageableElement" aggregation="composite" association="_SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_Activities_PackageableElement-E_extension_Overwrite_base_ObjectNode_PackageableElement-extension_Overwrite_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_ModelElements_PackageableElement" name="ModelElements">
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement" name="Viewpoint">
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-stakeholders_Property" name="stakeholders" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-stakeholders_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-stakeholders_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-languages_Property" name="languages" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-languages_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-languages_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-methods_Property" name="methods" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-methods_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-methods_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-purpose_Property" name="purpose" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-concerns_Property" name="concerns" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-concerns_Property-lowerValue__ValueSpecification"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-concerns_Property-upperValue__ValueSpecification" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-base_Class_Property" name="base_Class" visibility="public" association="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ModelElements_PackageableElement-Rationale_PackageableElement" name="Rationale">
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Rationale_PackageableElement-base_Comment_Property" name="base_Comment" visibility="public" association="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ModelElements_PackageableElement-Conform_PackageableElement" name="Conform">
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Conform_PackageableElement-base_Dependency_Property" name="base_Dependency" visibility="public" association="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ModelElements_PackageableElement-View_PackageableElement" name="View">
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-View_PackageableElement-viewPoint_Property" name="viewPoint" visibility="public" type="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement" isDerived="true"/>
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-View_PackageableElement-base_Package_Property" name="base_Package" visibility="public" association="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_SysML_ModelElements_PackageableElement-Problem_PackageableElement" name="Problem">
+        <ownedAttribute xmi:id="_SysML_ModelElements_PackageableElement-Problem_PackageableElement-base_Comment_Property" name="base_Comment" visibility="public" association="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Comment"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement" name="E_base_Dependency_extension_Conform" memberEnd="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement-extension_Conform_Property _SysML_ModelElements_PackageableElement-Conform_PackageableElement-base_Dependency_Property" navigableOwnedEnd="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement-extension_Conform_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement-extension_Conform_Property" name="extension_Conform" visibility="public" type="_SysML_ModelElements_PackageableElement-Conform_PackageableElement" aggregation="composite" association="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Dependency_extension_Conform_PackageableElement-extension_Conform_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement" name="E_base_Class_extension_Viewpoint" memberEnd="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement-extension_Viewpoint_Property _SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement-base_Class_Property" navigableOwnedEnd="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement-extension_Viewpoint_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement-extension_Viewpoint_Property" name="extension_Viewpoint" visibility="public" type="_SysML_ModelElements_PackageableElement-Viewpoint_PackageableElement" aggregation="composite" association="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Class_extension_Viewpoint_PackageableElement-extension_Viewpoint_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement" name="E_base_Package_extension_View" memberEnd="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement-extension_View_Property _SysML_ModelElements_PackageableElement-View_PackageableElement-base_Package_Property" navigableOwnedEnd="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement-extension_View_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement-extension_View_Property" name="extension_View" visibility="public" type="_SysML_ModelElements_PackageableElement-View_PackageableElement" aggregation="composite" association="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Package_extension_View_PackageableElement-extension_View_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement" name="E_base_Comment_extension_Rationale" memberEnd="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement-extension_Rationale_Property _SysML_ModelElements_PackageableElement-Rationale_PackageableElement-base_Comment_Property" navigableOwnedEnd="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement-extension_Rationale_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement-extension_Rationale_Property" name="extension_Rationale" visibility="public" type="_SysML_ModelElements_PackageableElement-Rationale_PackageableElement" aggregation="composite" association="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Rationale_PackageableElement-extension_Rationale_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement" name="E_base_Comment_extension_Problem" memberEnd="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement-extension_Problem_Property _SysML_ModelElements_PackageableElement-Problem_PackageableElement-base_Comment_Property" navigableOwnedEnd="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement-extension_Problem_Property">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement-extension_Problem_Property" name="extension_Problem" visibility="public" type="_SysML_ModelElements_PackageableElement-Problem_PackageableElement" aggregation="composite" association="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SysML_ModelElements_PackageableElement-E_base_Comment_extension_Problem_PackageableElement-extension_Problem_Property-lowerValue__ValueSpecification"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Libraries_PackageableElement" name="Libraries">
+      <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement" name="PrimitiveValueTypes">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement" name="Real">
+          <generalization xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement-generalization__Generalization._SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement._SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement" general="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement" name="Number" isAbstract="true"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Boolean_PackageableElement" name="Boolean"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Integer_PackageableElement" name="Integer">
+          <generalization xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Integer_PackageableElement-generalization__Generalization._SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Integer_PackageableElement._SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement" general="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-String_PackageableElement" name="String"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement" name="Complex">
+          <generalization xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement-generalization__Generalization._SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement._SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement" general="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement"/>
+          <ownedAttribute xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement-realPart_Property" name="realPart" visibility="public" type="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement"/>
+          <ownedAttribute xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement-imaginaryPart_Property" name="imaginaryPart" visibility="public" type="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_SysML_Libraries_PackageableElement-ControlValues_PackageableElement" name="ControlValues">
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_SysML_Libraries_PackageableElement-ControlValues_PackageableElement-ControlValue_PackageableElement" name="ControlValue">
+          <ownedLiteral xmi:id="_SysML_Libraries_PackageableElement-ControlValues_PackageableElement-ControlValue_PackageableElement-disable_EnumerationLiteral" name="disable"/>
+          <ownedLiteral xmi:id="_SysML_Libraries_PackageableElement-ControlValues_PackageableElement-ControlValue_PackageableElement-enable_EnumerationLiteral" name="enable"/>
+        </packagedElement>
+      </packagedElement>
+      <profileApplication xmi:id="_SysML_Libraries_PackageableElement-profileApplication__ProfileApplication._SysML_Libraries_PackageableElement._SysML__0" appliedProfile="_SysML__0"/>
+    </packagedElement>
+  </uml:Profile>
+  <mofext:Tag xmi:id="_SysML__1" name="org.omg.xmi.nsPrefix" value="SysML" element="_SysML__0"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Real_PackageableElement"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Complex_PackageableElement"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Boolean_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Boolean_PackageableElement"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-ControlValues_PackageableElement-ControlValue_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-ControlValues_PackageableElement-ControlValue_PackageableElement"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Number_PackageableElement"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-String_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-String_PackageableElement"/>
+  <sysml:ValueType xmi:id="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Integer_PackageableElement-appliedStereotypeInstance__InstanceSpecification" base_DataType="_SysML_Libraries_PackageableElement-PrimitiveValueTypes_PackageableElement-Integer_PackageableElement"/>
+</xmi:XMI>

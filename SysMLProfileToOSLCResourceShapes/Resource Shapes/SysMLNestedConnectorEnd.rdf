@@ -1,0 +1,64 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:oslc="http://open-services.net/ns/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<oslc:ResourceShape rdf:about="http://myOSLCSDerviceProvider.com/sysml/NestedConnectorEndResourceShape">
+		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">NestedConnectorEnd Resource Shape</dcterms:title>
+		<oslc:describes rdf:resource="http://omg.org/sysml#NestedConnectorEnd"/>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>ownedComment</oslc:name>
+				<oslc:range rdf:resource="http://omg.org/sysml#Comment"/>
+				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>lowerValue</oslc:name>
+				<oslc:range rdf:resource="http://omg.org/sysml#ValueSpecification"/>
+				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>upperValue</oslc:name>
+				<oslc:range rdf:resource="http://omg.org/sysml#ValueSpecification"/>
+				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>partWithPort</oslc:name>
+				<oslc:range rdf:resource="http://omg.org/sysml#Property"/>
+				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>role</oslc:name>
+				<oslc:range rdf:resource="http://omg.org/sysml#ConnectableElement"/>
+				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>isOrdered</oslc:name>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>isUnique</oslc:name>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+	</oslc:ResourceShape>
+</rdf:RDF>

@@ -1,0 +1,511 @@
+/*
+ * The MIT License (MIT)
+
+Copyright (c) 2013 Axel Reichwein
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * 
+ * 
+ * 
+ * */
+ 
+
+
+package sysmlprofiletooslcresourceshapes;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EEnumLiteral;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.RDFWriter;
+
+public class ResourceShapeCreation {
+
+	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
+	static String umlEcoreFileLocation = "Original XMI/uml.ecore";
+	static String reusedUMLConceptsFileLocation = "Reused UML Concepts/UML4SysML.txt";
+	static EPackage sysmlPackage;
+	static EPackage umlPackage;
+	static EPackage primitiveSysMLValueTypesPackage;
+		
+	public static void main(String[] args) {
+		loadSysMLProfileAndUMLMetaModel();
+		ArrayList<EClassifier> sysmlConcepts = getSysMLConceptsToMap();
+		mapConceptsToOSLCResourceShapes("SysML", sysmlConcepts);
+		ArrayList<EClassifier> umlConcepts = getReusedUMLConceptsToMap();
+		mapConceptsToOSLCResourceShapes("UML", umlConcepts);
+	}
+
+	private static void mapConceptsToOSLCResourceShapes(String prefix,
+			ArrayList<EClassifier> eClassifiers) {
+		for (EClassifier eClassifier : eClassifiers) {
+			System.out.println("\t\t" + eClassifier.getName());
+
+			if (eClassifier instanceof EClass) {
+				EClass sysmlClass = (EClass) eClassifier;
+				StringBuffer buffer = new StringBuffer();
+				buffer.append("<rdf:RDF");
+				buffer.append("\r\n");
+				buffer.append("\txmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"");
+				buffer.append("\r\n");
+				buffer.append("\txmlns:oslc=\"http://open-services.net/ns/core#\"");
+				buffer.append("\r\n");
+				buffer.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
+				buffer.append("\r\n");
+				buffer.append("\txmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\">");
+
+				// oslc:ResourceShape
+				buffer.append("\r\n");
+				buffer.append("\t<oslc:ResourceShape rdf:about=\"http://myOSLCSDerviceProvider.com/sysml/"
+						+ sysmlClass.getName() + "ResourceShape\">");
+
+				// dcterms:title
+				buffer.append("\r\n");
+				buffer.append("\t\t<dcterms:title rdf:datatype=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral\">"
+						+ sysmlClass.getName()
+						+ " Resource Shape</dcterms:title>");
+
+				// oslc:describes
+				buffer.append("\r\n");
+				buffer.append("\t\t<oslc:describes rdf:resource=\"http://omg.org/sysml#"
+						+ sysmlClass.getName() + "\"/>");
+
+				Set<EStructuralFeature> eStructuralFeatures = getAllEStructuralFeatures(
+						sysmlClass, new LinkedHashSet<EStructuralFeature>());
+				// Set<EEnum> enumerations = getAllEEnumerations(sysmlClass, new
+				// LinkedHashSet<EEnum>());
+				Set<EEnum> enumerations = new LinkedHashSet<EEnum>();
+				for (EStructuralFeature eStructuralFeature : eStructuralFeatures) {
+					if (eStructuralFeature.isDerived()) {
+						continue;
+					}
+
+					// oslc:property
+					buffer.append("\r\n");
+					buffer.append("\t\t<oslc:property>");
+
+					// oslc:Property
+					buffer.append("\r\n");
+					buffer.append("\t\t\t<oslc:Property>");
+
+					// oslc:name
+					System.out.println("\t\t\t" + eStructuralFeature.getName());
+					buffer.append("\r\n");
+					buffer.append("\t\t\t\t<oslc:name>"
+							+ eStructuralFeature.getName() + "</oslc:name>");
+
+					// oslc:valueType or oslc:range
+					System.out.println("\t\t\t\t"
+							+ eStructuralFeature.getEType().getName());
+					if (eStructuralFeature instanceof EAttribute) {
+						buffer.append("\r\n");
+						if (eStructuralFeature.getEType().getName()
+								.equals("String")) {
+							buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#string\"/>");
+						} else if (eStructuralFeature.getEType().getName()
+								.equals("Integer")) {
+							buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#integer\"/>");
+						} else if (eStructuralFeature.getEType().getName()
+								.equals("Boolean")) {
+							buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#boolean\"/>");
+						}
+
+						if (eStructuralFeature.getEType() instanceof EEnum) {
+							EEnum eEnum = (EEnum) eStructuralFeature.getEType();
+							enumerations.add(eEnum);
+
+							// oslc:allowedValues
+							buffer.append("\t\t\t\t<oslc:allowedValues rdf:resource=\"http://omg.org/sysml#"
+									+ eEnum.getName() + "\"/>");
+						}
+					} else if (eStructuralFeature instanceof EReference) {
+						// oslc:range
+						buffer.append("\r\n");
+						buffer.append("\t\t\t\t<oslc:range rdf:resource=\"http://omg.org/sysml#"
+								+ eStructuralFeature.getEType().getName()
+								+ "\"/>");
+
+						// oslc:valueType
+						buffer.append("\r\n");
+						buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://open-services.net/ns/core#Resource\"/>");
+					}
+
+					// oslc:occurs
+					System.out.println("\t\t\t\t"
+							+ eStructuralFeature.getLowerBound());
+					System.out.println("\t\t\t\t"
+							+ eStructuralFeature.getUpperBound());
+					buffer.append("\r\n");
+					int lowerBound = eStructuralFeature.getLowerBound();
+					int upperBound = eStructuralFeature.getUpperBound();
+					// occurs EXACTLY ONE
+					if (lowerBound == 1 & upperBound == 1) {
+						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Exactly-one\"/>");
+					}
+					// zero-or-one
+					else if (lowerBound == 0 & upperBound == 1) {
+						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-services.net/ns/core#Zero-or-one\"/>");
+					}
+					// one or many
+					else if (lowerBound == 1 & upperBound == -1) {
+						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-services.net/ns/core#One-or-many\"/>");
+					}
+					// Zero-or-many
+					else if (lowerBound == 0 & upperBound == -1) {
+						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Zero-or-many\"/>");
+					} else {
+						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Zero-or-many\"/>");
+					}
+
+					buffer.append("\r\n");
+					buffer.append("\t\t\t</oslc:Property>");
+
+					buffer.append("\r\n");
+					buffer.append("\t\t</oslc:property>");
+				}
+				buffer.append("\r\n");
+				buffer.append("\t</oslc:ResourceShape>");
+
+				// enumerations
+				for (EEnum enumration : enumerations) {
+					buffer.append("\r\n");
+					buffer.append("\t<oslc:AllowedValues rdf:about=\"http://omg.org/sysml#"
+							+ enumration.getName() + "\">");
+
+					// dcterms:title
+					buffer.append("\r\n");
+					buffer.append("\t\t<dcterms:title rdf:parseType=\"Literal\">"
+							+ enumration.getName() + "</dcterms:title>");
+
+					for (EEnumLiteral eEnumLiteral : enumration.getELiterals()) {
+						buffer.append("\r\n");
+						buffer.append("\t\t<oslc:allowedValue>"
+								+ eEnumLiteral.getLiteral()
+								+ "</oslc:allowedValue>");
+					}
+
+					buffer.append("\r\n");
+					buffer.append("\t</oslc:AllowedValues>");
+
+				}
+
+				buffer.append("\r\n");
+				buffer.append("</rdf:RDF>");
+
+				FileWriter fileWriter;
+				try {
+					fileWriter = new FileWriter("Resource Shapes/" + prefix
+							+ sysmlClass.getName() + ".rdf");
+					fileWriter.append(buffer);
+					fileWriter.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+	private static void loadSysMLProfileAndUMLMetaModel() {
+		// load uml.ecore model and get list of all non-abstract uml metaclasses
+		Resource umlEcoreResource = loadEcoreModel(URI.createFileURI(new File(
+				umlEcoreFileLocation).getAbsolutePath()));
+		umlPackage = (EPackage) EcoreUtil.getObjectByType(
+				umlEcoreResource.getContents(),
+				EcorePackage.eINSTANCE.getEPackage());
+
+		// load sysml.ecore model
+		Resource sysmlEcoreResource = loadEcoreModel(URI
+				.createFileURI(new File(sysmlEcoreFileLocation)
+						.getAbsolutePath()));
+		sysmlPackage = (EPackage) EcoreUtil.getObjectByType(
+				sysmlEcoreResource.getContents(),
+				EcorePackage.eINSTANCE.getEPackage());
+		System.out.println(sysmlPackage.getName());
+
+		// load sysml.ecore model and get package containing primitive types
+		for (EPackage ePackage : sysmlPackage.getESubpackages()) {
+			if (ePackage.getName().equals("libraries")) {
+				for (EPackage ePackage2 : ePackage.getESubpackages()) {
+					if (ePackage2.getName().equals("primitiveValueTypes")) {
+						primitiveSysMLValueTypesPackage = ePackage2;
+						break;
+					}
+				}
+			}
+		}
+		ArrayList<EDataType> umlEDataTypes = new ArrayList<EDataType>();
+		for (EClassifier eClassifier : umlPackage.getEClassifiers()) {
+			if (eClassifier instanceof EDataType) {
+				EDataType eDataType = (EDataType) eClassifier;
+				umlEDataTypes.add(eDataType);
+			}
+		}
+	}
+
+	static private ArrayList<EClassifier> getSysMLConceptsToMap() {
+		ArrayList<EClassifier> sysmlConceptsToMap = new ArrayList<EClassifier>();
+		for (EPackage nestedPackage : sysmlPackage.getESubpackages()) {
+			System.out.println("\t" + nestedPackage.getName());
+			for (EClassifier eClassifier : nestedPackage.getEClassifiers()) {
+				sysmlConceptsToMap.add(eClassifier);
+			}
+		}
+		return sysmlConceptsToMap;
+	}
+
+	private static Set<EEnum> getAllEEnumerations(EClass sysmlClass,
+			LinkedHashSet<EEnum> linkedHashSet) {
+		for (EAttribute eAttribute : sysmlClass.getEAllAttributes()) {
+			if (eAttribute.getEType() instanceof EEnum) {
+				EEnum eEnum = (EEnum) eAttribute.getEType();
+				linkedHashSet.add(eEnum);
+			}
+
+		}
+		for (EReference eReference : sysmlClass.getEAllReferences()) {
+			// System.out.println("\t\t\t" + eReference.getName());
+			if (eReference.getName().startsWith("base")) {
+				// System.out
+				// .println("\t\t\t\t" + eReference.getEType().getName());
+				EClassifier umlClassifier = eReference.getEType();
+				if (umlClassifier instanceof EClass) {
+					EClass umlType = (EClass) umlClassifier;
+
+					for (EAttribute umlAttribute : umlType.getEAllAttributes()) {
+						if (umlAttribute.getName().equals("eAnnotations")) {
+							continue;
+						}
+						if (umlAttribute.getEType() instanceof EEnum) {
+							EEnum eEnum = (EEnum) umlAttribute.getEType();
+							linkedHashSet.add(eEnum);
+						}
+					}
+					for (EClass eSuperType : umlType.getESuperTypes()) {
+						getAllEEnumerations(eSuperType, linkedHashSet);
+					}
+				}
+
+			}
+		}
+		return linkedHashSet;
+	}
+
+	private static LinkedHashSet<EStructuralFeature> getAllEStructuralFeatures(
+			EClass eClass, LinkedHashSet<EStructuralFeature> eStructuralFeatures) {
+		for (EAttribute eAttribute : eClass.getEAllAttributes()) {
+			// System.out.println("\t\t\t" + eAttribute.getName());
+			eStructuralFeatures.add(eAttribute);
+		}
+		for (EReference eReference : eClass.getEAllReferences()) {
+			// System.out.println("\t\t\t" + eReference.getName());
+			if (eReference.getName().startsWith("base")) {
+				// System.out
+				// .println("\t\t\t\t" + eReference.getEType().getName());
+				EClassifier umlClassifier = eReference.getEType();
+				if (umlClassifier instanceof EClass) {
+					EClass umlType = (EClass) umlClassifier;
+					for (EReference umlReference : umlType.getEAllReferences()) {
+						if (umlReference.getName().equals("eAnnotations")) {
+							continue;
+						}
+						// System.out.println("\t\t\t\t\t"
+						// + umlReference.getName());
+						eStructuralFeatures.add(umlReference);
+					}
+					for (EAttribute umlAttribute : umlType.getEAllAttributes()) {
+						if (umlAttribute.getName().equals("eAnnotations")) {
+							continue;
+						}
+						// System.out.println("\t\t\t\t\t"
+						// + umlAttribute.getName());
+						eStructuralFeatures.add(umlAttribute);
+					}
+					for (EClass eSuperType : umlType.getESuperTypes()) {
+						getAllEStructuralFeatures(eSuperType,
+								eStructuralFeatures);
+					}
+				}
+
+			}
+		}
+		return eStructuralFeatures;
+	}
+
+	private static Resource loadEcoreModel(URI fileURI) {
+		// Create a resource set.
+		ResourceSet resourceSet = new ResourceSetImpl();
+
+		// Register the default resource factory -- only needed for stand-alone!
+		resourceSet
+				.getResourceFactoryRegistry()
+				.getExtensionToFactoryMap()
+				.put(Resource.Factory.Registry.DEFAULT_EXTENSION,
+						new XMIResourceFactoryImpl());
+
+		// Register the package -- only needed for stand-alone!
+		EcorePackage ecorePackage = EcorePackage.eINSTANCE;
+
+		// Demand load the resource for this file.
+		Resource resource = resourceSet.getResource(fileURI, true);
+		return resource;
+	}
+
+	public static ArrayList<EClassifier> getReusedUMLConceptsToMap() {
+		ArrayList<EClassifier> umlEClassifiersToMap = new ArrayList<EClassifier>();
+		// process file containing reused UML concepts
+		File file = new File(reusedUMLConceptsFileLocation);
+		int umlMetaClassesCount = 0;
+		int sysmlPrimitiveValueTypesCount = 0;
+		int umlPrimitiveTypesCount = 0;
+		int nonUmlMetaClassesCount = 0;
+		int sysmlMetaClassesCount = 0;
+		int totalMetaClassesCount = 0;
+		try {
+			String content = new Scanner(file).useDelimiter("\\Z").next();
+			String[] metaclasses = content.split(",");
+			for (String metaclass : metaclasses) {
+				metaclass = metaclass.trim();
+				String[] metaclassSegments = metaclass.split("::");
+				if (metaclassSegments.length == 2) {
+					if (metaclassSegments[0].equals("UML")) {
+						boolean isUmlMetaclassFound = false;
+						String umlMetaclass = metaclassSegments[1];
+						for (EClassifier eClassifier : umlPackage
+								.getEClassifiers()) {
+							if (eClassifier instanceof EClass) {
+								if (eClassifier.getName().equals(umlMetaclass)) {
+									umlMetaClassesCount++;
+									isUmlMetaclassFound = true;
+									EClass eClass = (EClass) eClassifier;
+									if (eClass.isAbstract()) {
+										umlEClassifiersToMap.add(eClassifier);
+									}
+									break;
+								}
+							} else if (eClassifier instanceof EEnum) {
+								EEnum eEnum = (EEnum) eClassifier;
+								if (eClassifier.getName().equals(umlMetaclass)) {
+									umlMetaClassesCount++;
+									isUmlMetaclassFound = true;
+									break;
+								}
+							}
+						}
+						if (!isUmlMetaclassFound) {
+							System.out.println("uml metaclass not found: "
+									+ umlMetaclass);
+						}
+					} else if (metaclassSegments[0]
+							.equals("PrimitiveValueTypes")) {
+						String umlPrimitiveType = metaclassSegments[1];
+						boolean isSysMLPrimitiveTypeFound = false;
+						for (EClassifier eClassifier : primitiveSysMLValueTypesPackage
+								.getEClassifiers()) {
+							if (eClassifier.getName().equals(umlPrimitiveType)) {
+								// System.out.println(umlMetaclass);
+								sysmlPrimitiveValueTypesCount++;
+								isSysMLPrimitiveTypeFound = true;
+								break;
+							}
+						}
+						if (!isSysMLPrimitiveTypeFound) {
+							System.out.println("primitive type not found: "
+									+ umlPrimitiveType);
+						}
+					} else if (metaclassSegments[0].equals("PrimitiveTypes")) {
+						String umlPrimitiveType = metaclassSegments[1];
+						boolean isumlPrimitiveTypeFound = false;
+						for (EClassifier eClassifier : primitiveSysMLValueTypesPackage
+								.getEClassifiers()) {
+							if (eClassifier.getName().equals(umlPrimitiveType)) {
+								// System.out.println(umlMetaclass);
+								umlPrimitiveTypesCount++;
+								isumlPrimitiveTypeFound = true;
+								break;
+							}
+						}
+						if (!isumlPrimitiveTypeFound) {
+							System.out.println("UML Primitive Type not found: "
+									+ umlPrimitiveType);
+						}
+					} else {
+						System.out.println("non UML concept: " + metaclass);
+						nonUmlMetaClassesCount++;
+					}
+				} else {
+					if (metaclassSegments[0].equals("SysML")) {
+						sysmlMetaClassesCount++;
+					} else {
+						System.out.println("non UML concept: " + metaclass);
+						nonUmlMetaClassesCount++;
+					}
+				}
+				totalMetaClassesCount++;
+			}
+			System.out
+					.println("QUICK CHECK TO SEE THAT ALL CONCEPTS HAVE BEEN PROCESSED");
+			System.out.println("UML Metaclasses count: " + umlMetaClassesCount);
+			System.out.println("UML Primitive Types count: "
+					+ umlPrimitiveTypesCount);
+			System.out.println(" SysML Primitive ValueTypes count: "
+					+ sysmlPrimitiveValueTypesCount);
+			System.out.println("SysML Metaclasses count: "
+					+ sysmlMetaClassesCount);
+			System.out.println("Unknown Concepts Count: "
+					+ nonUmlMetaClassesCount);
+			System.out
+					.println("Total Concepts count: " + totalMetaClassesCount);
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return umlEClassifiersToMap;
+
+	}
+}
