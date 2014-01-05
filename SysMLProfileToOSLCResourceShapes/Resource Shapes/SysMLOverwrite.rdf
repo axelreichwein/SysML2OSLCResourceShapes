@@ -1,15 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:oslc="http://open-services.net/ns/core#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-	<oslc:ResourceShape rdf:about="http://myOSLCSDerviceProvider.com/sysml/OverwriteResourceShape">
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sysml="http://omg.org/sysml#">
+	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/OverwriteResourceShape">
+		<oslc:describes rdf:resource="sysml:Overwrite"/>
 		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Overwrite Resource Shape</dcterms:title>
-		<oslc:describes rdf:resource="http://omg.org/sysml#Overwrite"/>
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>ownedComment</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#Comment"/>
+				<oslc:propertyDefinition rdf:resource="sysml:Element_ownedComment"/>
+				<oslc:range rdf:resource="sysml:Comment"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -17,7 +20,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>clientDependency</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#Dependency"/>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_clientDependency"/>
+				<oslc:range rdf:resource="sysml:Dependency"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -25,7 +29,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>nameExpression</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#StringExpression"/>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_nameExpression"/>
+				<oslc:range rdf:resource="sysml:StringExpression"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -33,7 +38,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>inPartition</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ActivityPartition"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ActivityNode_inPartition"/>
+				<oslc:range rdf:resource="sysml:ActivityPartition"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -41,7 +47,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>inStructuredNode</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#StructuredActivityNode"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ActivityNode_inStructuredNode"/>
+				<oslc:range rdf:resource="sysml:StructuredActivityNode"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -49,7 +56,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>inInterruptibleRegion</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#InterruptibleActivityRegion"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ActivityNode_inInterruptibleRegion"/>
+				<oslc:range rdf:resource="sysml:InterruptibleActivityRegion"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -57,7 +65,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>outgoing</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ActivityEdge"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ActivityNode_outgoing"/>
+				<oslc:range rdf:resource="sysml:ActivityEdge"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -65,7 +74,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>incoming</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ActivityEdge"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ActivityNode_incoming"/>
+				<oslc:range rdf:resource="sysml:ActivityEdge"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -73,7 +83,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>redefinedNode</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ActivityNode"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ActivityNode_redefinedNode"/>
+				<oslc:range rdf:resource="sysml:ActivityNode"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -81,7 +92,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>type</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#Type"/>
+				<oslc:propertyDefinition rdf:resource="sysml:TypedElement_type"/>
+				<oslc:range rdf:resource="sysml:Type"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -89,7 +101,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>inState</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#State"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ObjectNode_inState"/>
+				<oslc:range rdf:resource="sysml:State"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -97,7 +110,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>selection</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#Behavior"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ObjectNode_selection"/>
+				<oslc:range rdf:resource="sysml:Behavior"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -105,7 +119,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>upperBound</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ValueSpecification"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ObjectNode_upperBound"/>
+				<oslc:range rdf:resource="sysml:ValueSpecification"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>
@@ -113,6 +128,7 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>name</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_name"/>
 				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -120,13 +136,15 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>visibility</oslc:name>
-				<oslc:allowedValues rdf:resource="http://omg.org/sysml#VisibilityKind"/>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_visibility"/>
+				<oslc:allowedValues rdf:resource="sysml:VisibilityKind"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
 		</oslc:property>
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>isLeaf</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:RedefinableElement_isLeaf"/>
 				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>
@@ -134,6 +152,7 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>isControlType</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:ObjectNode_isControlType"/>
 				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>
@@ -141,19 +160,20 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>ordering</oslc:name>
-				<oslc:allowedValues rdf:resource="http://omg.org/sysml#ObjectNodeOrderingKind"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ObjectNode_ordering"/>
+				<oslc:allowedValues rdf:resource="sysml:ObjectNodeOrderingKind"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>
 		</oslc:property>
 	</oslc:ResourceShape>
-	<oslc:AllowedValues rdf:about="http://omg.org/sysml#VisibilityKind">
+	<oslc:AllowedValues rdf:about="sysml:VisibilityKind">
 		<dcterms:title rdf:parseType="Literal">VisibilityKind</dcterms:title>
 		<oslc:allowedValue>public</oslc:allowedValue>
 		<oslc:allowedValue>private</oslc:allowedValue>
 		<oslc:allowedValue>protected</oslc:allowedValue>
 		<oslc:allowedValue>package</oslc:allowedValue>
 	</oslc:AllowedValues>
-	<oslc:AllowedValues rdf:about="http://omg.org/sysml#ObjectNodeOrderingKind">
+	<oslc:AllowedValues rdf:about="sysml:ObjectNodeOrderingKind">
 		<dcterms:title rdf:parseType="Literal">ObjectNodeOrderingKind</dcterms:title>
 		<oslc:allowedValue>unordered</oslc:allowedValue>
 		<oslc:allowedValue>ordered</oslc:allowedValue>

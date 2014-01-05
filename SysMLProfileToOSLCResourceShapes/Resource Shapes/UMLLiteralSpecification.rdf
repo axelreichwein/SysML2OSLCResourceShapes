@@ -1,14 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:oslc="http://open-services.net/ns/core#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-	<oslc:ResourceShape rdf:about="http://myOSLCSDerviceProvider.com/sysml/LiteralSpecificationResourceShape">
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sysml="http://omg.org/sysml#">
+	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/LiteralSpecificationResourceShape">
+		<oslc:describes rdf:resource="sysml:LiteralSpecification"/>
 		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">LiteralSpecification Resource Shape</dcterms:title>
-		<oslc:describes rdf:resource="http://omg.org/sysml#LiteralSpecification"/>
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>name</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_name"/>
 				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -16,12 +19,13 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>visibility</oslc:name>
-				<oslc:allowedValues rdf:resource="http://omg.org/sysml#VisibilityKind"/>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_visibility"/>
+				<oslc:allowedValues rdf:resource="sysml:VisibilityKind"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
 		</oslc:property>
 	</oslc:ResourceShape>
-	<oslc:AllowedValues rdf:about="http://omg.org/sysml#VisibilityKind">
+	<oslc:AllowedValues rdf:about="sysml:VisibilityKind">
 		<dcterms:title rdf:parseType="Literal">VisibilityKind</dcterms:title>
 		<oslc:allowedValue>public</oslc:allowedValue>
 		<oslc:allowedValue>private</oslc:allowedValue>

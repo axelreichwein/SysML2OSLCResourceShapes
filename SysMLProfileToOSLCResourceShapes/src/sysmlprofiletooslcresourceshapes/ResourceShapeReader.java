@@ -14,6 +14,7 @@ public class ResourceShapeReader {
 
 		// use FileManager to read OSLC Resource Shape in RDF
 		String inputFileName = "file:C:/Users/Axel/git/SysMLProfileToOSLCResourceShapes/SysMLProfileToOSLCResourceShapes/Resource Shapes/SysMLBlock.rdf";
+//		String inputFileName = "file:C:/Users/Axel/git/SysMLProfileToOSLCResourceShapes/SysMLProfileToOSLCResourceShapes/RDF Vocabulary/sysmlRDFVocabulary.rdf";
 		InputStream in = FileManager.get().open(inputFileName);
 		if (in == null) {
 			throw new IllegalArgumentException("File: " + inputFileName

@@ -1,15 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:oslc="http://open-services.net/ns/core#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-	<oslc:ResourceShape rdf:about="http://myOSLCSDerviceProvider.com/sysml/NestedConnectorEndResourceShape">
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sysml="http://omg.org/sysml#">
+	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/NestedConnectorEndResourceShape">
+		<oslc:describes rdf:resource="sysml:NestedConnectorEnd"/>
 		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">NestedConnectorEnd Resource Shape</dcterms:title>
-		<oslc:describes rdf:resource="http://omg.org/sysml#NestedConnectorEnd"/>
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>ownedComment</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#Comment"/>
+				<oslc:propertyDefinition rdf:resource="sysml:Element_ownedComment"/>
+				<oslc:range rdf:resource="sysml:Comment"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Zero-or-many"/>
 			</oslc:Property>
@@ -17,7 +20,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>lowerValue</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ValueSpecification"/>
+				<oslc:propertyDefinition rdf:resource="sysml:MultiplicityElement_lowerValue"/>
+				<oslc:range rdf:resource="sysml:ValueSpecification"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -25,7 +29,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>upperValue</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ValueSpecification"/>
+				<oslc:propertyDefinition rdf:resource="sysml:MultiplicityElement_upperValue"/>
+				<oslc:range rdf:resource="sysml:ValueSpecification"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -33,7 +38,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>partWithPort</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#Property"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ConnectorEnd_partWithPort"/>
+				<oslc:range rdf:resource="sysml:Property"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
 			</oslc:Property>
@@ -41,7 +47,8 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>role</oslc:name>
-				<oslc:range rdf:resource="http://omg.org/sysml#ConnectableElement"/>
+				<oslc:propertyDefinition rdf:resource="sysml:ConnectorEnd_role"/>
+				<oslc:range rdf:resource="sysml:ConnectableElement"/>
 				<oslc:valueType rdf:resource="http://open-services.net/ns/core#Resource"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>
@@ -49,6 +56,7 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>isOrdered</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:MultiplicityElement_isOrdered"/>
 				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>
@@ -56,6 +64,7 @@
 		<oslc:property>
 			<oslc:Property>
 				<oslc:name>isUnique</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:MultiplicityElement_isUnique"/>
 				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
 			</oslc:Property>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:oslc="http://open-services.net/ns/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sysml="http://omg.org/sysml#">
+	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/ParameterResourceShape">
+		<oslc:describes rdf:resource="sysml:Parameter"/>
+		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Parameter Resource Shape</dcterms:title>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>name</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_name"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>visibility</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_visibility"/>
+				<oslc:allowedValues rdf:resource="sysml:VisibilityKind"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>isOrdered</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:MultiplicityElement_isOrdered"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>isUnique</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:MultiplicityElement_isUnique"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>direction</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Parameter_direction"/>
+				<oslc:allowedValues rdf:resource="sysml:ParameterDirectionKind"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>effect</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Parameter_effect"/>
+				<oslc:allowedValues rdf:resource="sysml:ParameterEffectKind"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>isException</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Parameter_isException"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>isStream</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Parameter_isStream"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+	</oslc:ResourceShape>
+	<oslc:AllowedValues rdf:about="sysml:VisibilityKind">
+		<dcterms:title rdf:parseType="Literal">VisibilityKind</dcterms:title>
+		<oslc:allowedValue>public</oslc:allowedValue>
+		<oslc:allowedValue>private</oslc:allowedValue>
+		<oslc:allowedValue>protected</oslc:allowedValue>
+		<oslc:allowedValue>package</oslc:allowedValue>
+	</oslc:AllowedValues>
+	<oslc:AllowedValues rdf:about="sysml:ParameterDirectionKind">
+		<dcterms:title rdf:parseType="Literal">ParameterDirectionKind</dcterms:title>
+		<oslc:allowedValue>in</oslc:allowedValue>
+		<oslc:allowedValue>inout</oslc:allowedValue>
+		<oslc:allowedValue>out</oslc:allowedValue>
+		<oslc:allowedValue>return</oslc:allowedValue>
+	</oslc:AllowedValues>
+	<oslc:AllowedValues rdf:about="sysml:ParameterEffectKind">
+		<dcterms:title rdf:parseType="Literal">ParameterEffectKind</dcterms:title>
+		<oslc:allowedValue>create</oslc:allowedValue>
+		<oslc:allowedValue>read</oslc:allowedValue>
+		<oslc:allowedValue>update</oslc:allowedValue>
+		<oslc:allowedValue>delete</oslc:allowedValue>
+	</oslc:AllowedValues>
+</rdf:RDF>

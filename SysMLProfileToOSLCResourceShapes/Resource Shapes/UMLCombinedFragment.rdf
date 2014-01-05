@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:oslc="http://open-services.net/ns/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sysml="http://omg.org/sysml#">
+	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/CombinedFragmentResourceShape">
+		<oslc:describes rdf:resource="sysml:CombinedFragment"/>
+		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">CombinedFragment Resource Shape</dcterms:title>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>name</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_name"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>visibility</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:NamedElement_visibility"/>
+				<oslc:allowedValues rdf:resource="sysml:VisibilityKind"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>interactionOperator</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:CombinedFragment_interactionOperator"/>
+				<oslc:allowedValues rdf:resource="sysml:InteractionOperatorKind"/>
+				<oslc:occurs rdf:resource="http://open-service.net/ns/core#Exactly-one"/>
+			</oslc:Property>
+		</oslc:property>
+	</oslc:ResourceShape>
+	<oslc:AllowedValues rdf:about="sysml:VisibilityKind">
+		<dcterms:title rdf:parseType="Literal">VisibilityKind</dcterms:title>
+		<oslc:allowedValue>public</oslc:allowedValue>
+		<oslc:allowedValue>private</oslc:allowedValue>
+		<oslc:allowedValue>protected</oslc:allowedValue>
+		<oslc:allowedValue>package</oslc:allowedValue>
+	</oslc:AllowedValues>
+	<oslc:AllowedValues rdf:about="sysml:InteractionOperatorKind">
+		<dcterms:title rdf:parseType="Literal">InteractionOperatorKind</dcterms:title>
+		<oslc:allowedValue>seq</oslc:allowedValue>
+		<oslc:allowedValue>alt</oslc:allowedValue>
+		<oslc:allowedValue>opt</oslc:allowedValue>
+		<oslc:allowedValue>break</oslc:allowedValue>
+		<oslc:allowedValue>par</oslc:allowedValue>
+		<oslc:allowedValue>strict</oslc:allowedValue>
+		<oslc:allowedValue>loop</oslc:allowedValue>
+		<oslc:allowedValue>critical</oslc:allowedValue>
+		<oslc:allowedValue>neg</oslc:allowedValue>
+		<oslc:allowedValue>assert</oslc:allowedValue>
+		<oslc:allowedValue>ignore</oslc:allowedValue>
+		<oslc:allowedValue>consider</oslc:allowedValue>
+	</oslc:AllowedValues>
+</rdf:RDF>

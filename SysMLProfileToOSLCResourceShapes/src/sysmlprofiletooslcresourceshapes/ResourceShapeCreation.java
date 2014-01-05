@@ -23,8 +23,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  * 
  * */
- 
-
 
 package sysmlprofiletooslcresourceshapes;
 
@@ -36,6 +34,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -64,19 +63,71 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class ResourceShapeCreation {
 
+	static String omgSysMLNamespaceURI = "http://omg.org/sysml#";
+	static String omgSysMLNamespacePrefix = "sysml";
 	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
 	static String umlEcoreFileLocation = "Original XMI/uml.ecore";
 	static String reusedUMLConceptsFileLocation = "Reused UML Concepts/UML4SysML.txt";
 	static EPackage sysmlPackage;
 	static EPackage umlPackage;
 	static EPackage primitiveSysMLValueTypesPackage;
-		
+	static Set<String> metaClasses = new HashSet<String>();
+	static Set<String> metaPropertyURIs = new HashSet<String>();
+	static StringBuffer rdfVocabularyBuffer = new StringBuffer();
+
 	public static void main(String[] args) {
-		loadSysMLProfileAndUMLMetaModel();
+		loadSysMLProfileAndUMLMetaModel();		
+		prepareRDFVocabularyFile();
+		convertSysMLMetamodelIntoRDFandOSLCResources();
+		closeRDFVocabularyFile();
+		
+		System.out.println("Created " + metaClasses.size() + " OSLC Resource Shapes");
+	}
+
+	private static void closeRDFVocabularyFile() {
+		rdfVocabularyBuffer.append("</rdf:RDF>");
+		FileWriter rdfsClassFileWriter;
+		try {
+			rdfsClassFileWriter = new FileWriter("RDF Vocabulary/"
+					+ omgSysMLNamespacePrefix + "RDFVocabulary.rdf");
+			rdfsClassFileWriter.append(rdfVocabularyBuffer);
+			rdfsClassFileWriter.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
+
+	private static void convertSysMLMetamodelIntoRDFandOSLCResources() {
+		// Convert SysML metaclasses and stereotypes into RDF vocabulary and
+		// OSLC resource shapes
 		ArrayList<EClassifier> sysmlConcepts = getSysMLConceptsToMap();
 		mapConceptsToOSLCResourceShapes("SysML", sysmlConcepts);
 		ArrayList<EClassifier> umlConcepts = getReusedUMLConceptsToMap();
 		mapConceptsToOSLCResourceShapes("UML", umlConcepts);
+
+	}
+
+	private static void prepareRDFVocabularyFile() {
+		// Create RDF Vocabulary
+		rdfVocabularyBuffer
+				.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer.append("<rdf:RDF");
+		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer
+				.append("\txmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"");
+		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer
+				.append("\txmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"");
+		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer
+				.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
+		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer.append("\txmlns:" + omgSysMLNamespacePrefix + "=\""
+				+ omgSysMLNamespaceURI + "\">");
+		rdfVocabularyBuffer.append("\r\n");
+
 	}
 
 	private static void mapConceptsToOSLCResourceShapes(String prefix,
@@ -84,34 +135,77 @@ public class ResourceShapeCreation {
 		for (EClassifier eClassifier : eClassifiers) {
 			System.out.println("\t\t" + eClassifier.getName());
 
+			if (metaClasses.contains(eClassifier.getName())) {
+				System.err.println(eClassifier.getName() + " ALREADY DEFINED!");
+				continue;
+			} else {
+				metaClasses.add(eClassifier.getName());
+			}
+
 			if (eClassifier instanceof EClass) {
 				EClass sysmlClass = (EClass) eClassifier;
-				StringBuffer buffer = new StringBuffer();
-				buffer.append("<rdf:RDF");
-				buffer.append("\r\n");
-				buffer.append("\txmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"");
-				buffer.append("\r\n");
-				buffer.append("\txmlns:oslc=\"http://open-services.net/ns/core#\"");
-				buffer.append("\r\n");
-				buffer.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
-				buffer.append("\r\n");
-				buffer.append("\txmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\">");
+
+				// Create RDFS Class
+				rdfVocabularyBuffer.append("\t<rdfs:Class");
+				rdfVocabularyBuffer.append(" rdf:about=\""
+						+ omgSysMLNamespacePrefix + ":" + eClassifier.getName()
+						+ "\">");
+				rdfVocabularyBuffer.append("\r\n");
+				rdfVocabularyBuffer
+						.append("\t\t<rdfs:label xml:lang=\"en-GB\">"
+								+ eClassifier.getName() + "</rdfs:label>");
+				rdfVocabularyBuffer.append("\r\n");
+				rdfVocabularyBuffer
+						.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
+								+ omgSysMLNamespaceURI + "\"/>");
+				rdfVocabularyBuffer.append("\r\n");
+				rdfVocabularyBuffer
+						.append("\t\t<dcterms:issued>2014-01-05</dcterms:issued>");
+				rdfVocabularyBuffer.append("\r\n");
+				rdfVocabularyBuffer.append("\t</rdfs:Class>");
+				rdfVocabularyBuffer.append("\r\n");
+
+				// Create OSLC Resource Shape
+				StringBuffer resourceShapeBuffer = new StringBuffer();
+				resourceShapeBuffer
+						.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer.append("<rdf:RDF");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\txmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\txmlns:oslc=\"http://open-services.net/ns/core#\"");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\txmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer.append("\txmlns:" + omgSysMLNamespacePrefix
+						+ "=\"" + omgSysMLNamespaceURI + "\">");
 
 				// oslc:ResourceShape
-				buffer.append("\r\n");
-				buffer.append("\t<oslc:ResourceShape rdf:about=\"http://myOSLCSDerviceProvider.com/sysml/"
-						+ sysmlClass.getName() + "ResourceShape\">");
-
-				// dcterms:title
-				buffer.append("\r\n");
-				buffer.append("\t\t<dcterms:title rdf:datatype=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral\">"
-						+ sysmlClass.getName()
-						+ " Resource Shape</dcterms:title>");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\t<oslc:ResourceShape rdf:about=\"http://myOSLCServiceProvider.com/sysml/"
+								+ sysmlClass.getName() + "ResourceShape\">");
 
 				// oslc:describes
-				buffer.append("\r\n");
-				buffer.append("\t\t<oslc:describes rdf:resource=\"http://omg.org/sysml#"
-						+ sysmlClass.getName() + "\"/>");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\t\t<oslc:describes rdf:resource=\""
+								+ omgSysMLNamespacePrefix + ":"
+								+ sysmlClass.getName() + "\"/>");
+
+				// dcterms:title
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer
+						.append("\t\t<dcterms:title rdf:datatype=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral\">"
+								+ sysmlClass.getName()
+								+ " Resource Shape</dcterms:title>");
 
 				Set<EStructuralFeature> eStructuralFeatures = getAllEStructuralFeatures(
 						sysmlClass, new LinkedHashSet<EStructuralFeature>());
@@ -123,34 +217,78 @@ public class ResourceShapeCreation {
 						continue;
 					}
 
+					String propertyID = eStructuralFeature
+							.getEContainingClass().getName()
+							+ "_"
+							+ eStructuralFeature.getName();
+
+					// Create RDF Property
+					rdfVocabularyBuffer.append("\t<rdf:Property");
+					rdfVocabularyBuffer.append(" rdf:about=\""
+							+ omgSysMLNamespacePrefix + ":" + propertyID
+							+ "\">");
+					rdfVocabularyBuffer.append("\r\n");
+					rdfVocabularyBuffer
+							.append("\t\t<rdfs:label xml:lang=\"en-GB\">"
+									+ eStructuralFeature.getName()
+									+ "</rdfs:label>");
+					rdfVocabularyBuffer.append("\r\n");
+					rdfVocabularyBuffer
+							.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
+									+ omgSysMLNamespaceURI + "\"/>");
+					rdfVocabularyBuffer.append("\r\n");
+					rdfVocabularyBuffer
+							.append("\t\t<dcterms:issued>2014-01-05</dcterms:issued>");
+					rdfVocabularyBuffer.append("\r\n");
+					rdfVocabularyBuffer.append("\t</rdf:Property>");
+					rdfVocabularyBuffer.append("\r\n");
+
+					// if (metaPropertyURIs.contains(propertyID)) {
+					// // System.err.println(propertyID + " ALREADY DEFINED!");
+					// continue;
+					// }else{
+					// metaPropertyURIs.add(propertyID);
+					// }
+
 					// oslc:property
-					buffer.append("\r\n");
-					buffer.append("\t\t<oslc:property>");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer.append("\t\t<oslc:property>");
 
 					// oslc:Property
-					buffer.append("\r\n");
-					buffer.append("\t\t\t<oslc:Property>");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer.append("\t\t\t<oslc:Property>");
 
 					// oslc:name
 					System.out.println("\t\t\t" + eStructuralFeature.getName());
-					buffer.append("\r\n");
-					buffer.append("\t\t\t\t<oslc:name>"
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer.append("\t\t\t\t<oslc:name>"
 							+ eStructuralFeature.getName() + "</oslc:name>");
+
+					// oslc:propertyDefinition
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer
+							.append("\t\t\t\t<oslc:propertyDefinition rdf:resource=\""
+									+ omgSysMLNamespacePrefix
+									+ ":"
+									+ propertyID + "\"/>");
 
 					// oslc:valueType or oslc:range
 					System.out.println("\t\t\t\t"
 							+ eStructuralFeature.getEType().getName());
 					if (eStructuralFeature instanceof EAttribute) {
-						buffer.append("\r\n");
+						resourceShapeBuffer.append("\r\n");
 						if (eStructuralFeature.getEType().getName()
 								.equals("String")) {
-							buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#string\"/>");
+							resourceShapeBuffer
+									.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#string\"/>");
 						} else if (eStructuralFeature.getEType().getName()
 								.equals("Integer")) {
-							buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#integer\"/>");
+							resourceShapeBuffer
+									.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#integer\"/>");
 						} else if (eStructuralFeature.getEType().getName()
 								.equals("Boolean")) {
-							buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#boolean\"/>");
+							resourceShapeBuffer
+									.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://www.w3.org/2001/XMLSchema#boolean\"/>");
 						}
 
 						if (eStructuralFeature.getEType() instanceof EEnum) {
@@ -158,19 +296,26 @@ public class ResourceShapeCreation {
 							enumerations.add(eEnum);
 
 							// oslc:allowedValues
-							buffer.append("\t\t\t\t<oslc:allowedValues rdf:resource=\"http://omg.org/sysml#"
-									+ eEnum.getName() + "\"/>");
+							resourceShapeBuffer
+									.append("\t\t\t\t<oslc:allowedValues rdf:resource=\""
+											+ omgSysMLNamespacePrefix
+											+ ":"
+											+ eEnum.getName() + "\"/>");
 						}
 					} else if (eStructuralFeature instanceof EReference) {
 						// oslc:range
-						buffer.append("\r\n");
-						buffer.append("\t\t\t\t<oslc:range rdf:resource=\"http://omg.org/sysml#"
-								+ eStructuralFeature.getEType().getName()
-								+ "\"/>");
+						resourceShapeBuffer.append("\r\n");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:range rdf:resource=\""
+										+ omgSysMLNamespacePrefix
+										+ ":"
+										+ eStructuralFeature.getEType()
+												.getName() + "\"/>");
 
 						// oslc:valueType
-						buffer.append("\r\n");
-						buffer.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://open-services.net/ns/core#Resource\"/>");
+						resourceShapeBuffer.append("\r\n");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:valueType rdf:resource=\"http://open-services.net/ns/core#Resource\"/>");
 					}
 
 					// oslc:occurs
@@ -178,69 +323,77 @@ public class ResourceShapeCreation {
 							+ eStructuralFeature.getLowerBound());
 					System.out.println("\t\t\t\t"
 							+ eStructuralFeature.getUpperBound());
-					buffer.append("\r\n");
+					resourceShapeBuffer.append("\r\n");
 					int lowerBound = eStructuralFeature.getLowerBound();
 					int upperBound = eStructuralFeature.getUpperBound();
 					// occurs EXACTLY ONE
 					if (lowerBound == 1 & upperBound == 1) {
-						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Exactly-one\"/>");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Exactly-one\"/>");
 					}
 					// zero-or-one
 					else if (lowerBound == 0 & upperBound == 1) {
-						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-services.net/ns/core#Zero-or-one\"/>");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-services.net/ns/core#Zero-or-one\"/>");
 					}
 					// one or many
 					else if (lowerBound == 1 & upperBound == -1) {
-						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-services.net/ns/core#One-or-many\"/>");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-services.net/ns/core#One-or-many\"/>");
 					}
 					// Zero-or-many
 					else if (lowerBound == 0 & upperBound == -1) {
-						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Zero-or-many\"/>");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Zero-or-many\"/>");
 					} else {
-						buffer.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Zero-or-many\"/>");
+						resourceShapeBuffer
+								.append("\t\t\t\t<oslc:occurs rdf:resource=\"http://open-service.net/ns/core#Zero-or-many\"/>");
 					}
 
-					buffer.append("\r\n");
-					buffer.append("\t\t\t</oslc:Property>");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer.append("\t\t\t</oslc:Property>");
 
-					buffer.append("\r\n");
-					buffer.append("\t\t</oslc:property>");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer.append("\t\t</oslc:property>");
 				}
-				buffer.append("\r\n");
-				buffer.append("\t</oslc:ResourceShape>");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer.append("\t</oslc:ResourceShape>");
 
 				// enumerations
 				for (EEnum enumration : enumerations) {
-					buffer.append("\r\n");
-					buffer.append("\t<oslc:AllowedValues rdf:about=\"http://omg.org/sysml#"
-							+ enumration.getName() + "\">");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer
+							.append("\t<oslc:AllowedValues rdf:about=\""
+									+ omgSysMLNamespacePrefix + ":"
+									+ enumration.getName() + "\">");
 
 					// dcterms:title
-					buffer.append("\r\n");
-					buffer.append("\t\t<dcterms:title rdf:parseType=\"Literal\">"
-							+ enumration.getName() + "</dcterms:title>");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer
+							.append("\t\t<dcterms:title rdf:parseType=\"Literal\">"
+									+ enumration.getName() + "</dcterms:title>");
 
 					for (EEnumLiteral eEnumLiteral : enumration.getELiterals()) {
-						buffer.append("\r\n");
-						buffer.append("\t\t<oslc:allowedValue>"
+						resourceShapeBuffer.append("\r\n");
+						resourceShapeBuffer.append("\t\t<oslc:allowedValue>"
 								+ eEnumLiteral.getLiteral()
 								+ "</oslc:allowedValue>");
 					}
 
-					buffer.append("\r\n");
-					buffer.append("\t</oslc:AllowedValues>");
+					resourceShapeBuffer.append("\r\n");
+					resourceShapeBuffer.append("\t</oslc:AllowedValues>");
 
 				}
 
-				buffer.append("\r\n");
-				buffer.append("</rdf:RDF>");
+				resourceShapeBuffer.append("\r\n");
+				resourceShapeBuffer.append("</rdf:RDF>");
 
-				FileWriter fileWriter;
+				FileWriter resourceShapeFileWriter;
 				try {
-					fileWriter = new FileWriter("Resource Shapes/" + prefix
-							+ sysmlClass.getName() + ".rdf");
-					fileWriter.append(buffer);
-					fileWriter.close();
+					resourceShapeFileWriter = new FileWriter("Resource Shapes/"
+							+ prefix + sysmlClass.getName() + ".rdf");
+					resourceShapeFileWriter.append(resourceShapeBuffer);
+					resourceShapeFileWriter.close();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -422,9 +575,9 @@ public class ResourceShapeCreation {
 									umlMetaClassesCount++;
 									isUmlMetaclassFound = true;
 									EClass eClass = (EClass) eClassifier;
-									if (eClass.isAbstract()) {
-										umlEClassifiersToMap.add(eClassifier);
-									}
+									// if (eClass.isAbstract()) {
+									umlEClassifiersToMap.add(eClassifier);
+									// }
 									break;
 								}
 							} else if (eClassifier instanceof EEnum) {

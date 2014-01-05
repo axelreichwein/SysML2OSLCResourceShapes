@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:oslc="http://open-services.net/ns/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sysml="http://omg.org/sysml#">
+	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/ImageResourceShape">
+		<oslc:describes rdf:resource="sysml:Image"/>
+		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Image Resource Shape</dcterms:title>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>content</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Image_content"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>format</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Image_format"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+		<oslc:property>
+			<oslc:Property>
+				<oslc:name>location</oslc:name>
+				<oslc:propertyDefinition rdf:resource="sysml:Image_location"/>
+				<oslc:valueType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+				<oslc:occurs rdf:resource="http://open-services.net/ns/core#Zero-or-one"/>
+			</oslc:Property>
+		</oslc:property>
+	</oslc:ResourceShape>
+</rdf:RDF>
