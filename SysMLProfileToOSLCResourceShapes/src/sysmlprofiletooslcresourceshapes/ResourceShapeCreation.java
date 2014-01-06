@@ -32,6 +32,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -40,6 +41,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -147,22 +149,54 @@ public class ResourceShapeCreation {
 				EClass sysmlClass = (EClass) eClassifier;
 
 				// Create RDFS Class
-				rdfVocabularyBuffer.append("\t<rdfs:Class");
+				rdfVocabularyBuffer.append("\t<rdfs:Class");								
 				rdfVocabularyBuffer.append(" rdf:about=\""
 						+ omgSysMLNamespacePrefix + ":" + eClassifier.getName()
 						+ "\">");
 				rdfVocabularyBuffer.append("\r\n");
+				
+				// rdfs:label
 				rdfVocabularyBuffer
 						.append("\t\t<rdfs:label xml:lang=\"en-GB\">"
 								+ eClassifier.getName() + "</rdfs:label>");
 				rdfVocabularyBuffer.append("\r\n");
+				
+				// dcterms:description
+				if(sysmlClass.getEAnnotations().size() > 0){
+					for (EAnnotation eAnnotation : sysmlClass.getEAnnotations()) {
+						if(eAnnotation.getSource().equals("http://www.eclipse.org/emf/2002/GenModel")){
+							String documentation = eAnnotation.getDetails().get("documentation");
+							// convert string into UTF8 encoding
+							try {
+								byte[] bytes = documentation.getBytes("ISO-8859-1");
+								String documentationUTF8 = new String(bytes, "UTF-8"); 
+								if(documentationUTF8 != null){
+									rdfVocabularyBuffer
+									.append("\t\t<dcterms:description xml:lang=\"en-GB\">"
+											+ documentationUTF8 + "</dcterms:description>");
+									rdfVocabularyBuffer.append("\r\n");	
+								}	
+							} catch (UnsupportedEncodingException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}												
+							break;
+						}
+					}					
+				}
+				
+				// rdfs:isDefinedBy
 				rdfVocabularyBuffer
 						.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
 								+ omgSysMLNamespaceURI + "\"/>");
 				rdfVocabularyBuffer.append("\r\n");
+				
+				// dcterms:issued
 				rdfVocabularyBuffer
 						.append("\t\t<dcterms:issued>2014-01-05</dcterms:issued>");
 				rdfVocabularyBuffer.append("\r\n");				
+				
+				// rdfs:subClassOf
 				if(sysmlClass.getEGenericSuperTypes().size() > 0){
 					for (EGenericType genericType : sysmlClass.getEGenericSuperTypes()) {
 						rdfVocabularyBuffer
@@ -239,15 +273,45 @@ public class ResourceShapeCreation {
 							+ omgSysMLNamespacePrefix + ":" + propertyID
 							+ "\">");
 					rdfVocabularyBuffer.append("\r\n");
+					
+					// rdfs:label
 					rdfVocabularyBuffer
 							.append("\t\t<rdfs:label xml:lang=\"en-GB\">"
 									+ eStructuralFeature.getName()
 									+ "</rdfs:label>");
 					rdfVocabularyBuffer.append("\r\n");
+					
+					// dcterms:description
+					if(eStructuralFeature.getEAnnotations().size() > 0){
+						for (EAnnotation eAnnotation : eStructuralFeature.getEAnnotations()) {
+							if(eAnnotation.getSource().equals("http://www.eclipse.org/emf/2002/GenModel")){
+								String documentation = eAnnotation.getDetails().get("documentation");
+								// convert string into UTF8 encoding
+								try {
+									byte[] bytes = documentation.getBytes("ISO-8859-1");
+									String documentationUTF8 = new String(bytes, "UTF-8"); 
+									if(documentationUTF8 != null){
+										rdfVocabularyBuffer
+										.append("\t\t<dcterms:description xml:lang=\"en-GB\">"
+												+ documentationUTF8 + "</dcterms:description>");
+										rdfVocabularyBuffer.append("\r\n");	
+									}	
+								} catch (UnsupportedEncodingException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}												
+								break;
+							}
+						}					
+					}
+					
+					// rdfs:isDefinedBy
 					rdfVocabularyBuffer
 							.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
 									+ omgSysMLNamespaceURI + "\"/>");
 					rdfVocabularyBuffer.append("\r\n");
+					
+					// dcterms:issued
 					rdfVocabularyBuffer
 							.append("\t\t<dcterms:issued>2014-01-05</dcterms:issued>");
 					rdfVocabularyBuffer.append("\r\n");
