@@ -49,6 +49,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -310,6 +311,31 @@ public class ResourceShapeCreation {
 							.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
 									+ omgSysMLNamespaceURI + "\"/>");
 					rdfVocabularyBuffer.append("\r\n");
+					
+					// rdfs:subPropertyOf
+					if(eStructuralFeature.getEAnnotations().size() > 0){
+						for (EAnnotation eAnnotation : eStructuralFeature.getEAnnotations()) {
+							if(eAnnotation.getSource().equals("subsets")){
+								if(eAnnotation.getReferences().size() > 0){
+									for (EObject eObject : eAnnotation.getReferences()) {
+										if(eObject instanceof EStructuralFeature){
+											EStructuralFeature eStructuralFeature2 = (EStructuralFeature) eObject;
+											String propertyID2 = eStructuralFeature2
+													.getEContainingClass().getName()
+													+ "_"
+													+ eStructuralFeature2.getName();
+											rdfVocabularyBuffer
+											.append("\t\t<rdfs:subPropertyOf rdf:resource=\""
+													+ omgSysMLNamespacePrefix + ":" + propertyID2 + "\"/>");
+											rdfVocabularyBuffer.append("\r\n");
+											break;
+										}
+									}
+								}									
+								break;
+							}
+						}					
+					}
 					
 					// dcterms:issued
 					rdfVocabularyBuffer
