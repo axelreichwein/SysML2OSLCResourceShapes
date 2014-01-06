@@ -603,6 +603,7 @@
 		<rdfs:label xml:lang="en-GB">InterfaceBlock</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Block"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Block_isEncapsulated">
 		<rdfs:label xml:lang="en-GB">isEncapsulated</rdfs:label>
@@ -2718,6 +2719,7 @@
 		<rdfs:label xml:lang="en-GB">ConstraintBlock</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Block"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Block_isEncapsulated">
 		<rdfs:label xml:lang="en-GB">isEncapsulated</rdfs:label>
@@ -3218,6 +3220,7 @@
 		<rdfs:label xml:lang="en-GB">Verify</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
@@ -3548,6 +3551,7 @@
 		<rdfs:label xml:lang="en-GB">Satisfy</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
@@ -3633,6 +3637,7 @@
 		<rdfs:label xml:lang="en-GB">DeriveReqt</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
@@ -3688,6 +3693,7 @@
 		<rdfs:label xml:lang="en-GB">Copy</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
@@ -4453,6 +4459,7 @@
 		<rdfs:label xml:lang="en-GB">Continuous</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Rate"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
@@ -4698,6 +4705,7 @@
 		<rdfs:label xml:lang="en-GB">Discrete</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Rate"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
@@ -5213,6 +5221,7 @@
 		<rdfs:label xml:lang="en-GB">Abstraction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Dependency"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5228,6 +5237,7 @@
 		<rdfs:label xml:lang="en-GB">Action</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ExecutableNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5253,6 +5263,7 @@
 		<rdfs:label xml:lang="en-GB">ActionExecutionSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ExecutionSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5268,6 +5279,7 @@
 		<rdfs:label xml:lang="en-GB">Activity</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Behavior"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5318,6 +5330,7 @@
 		<rdfs:label xml:lang="en-GB">ActivityEdge</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5338,6 +5351,7 @@
 		<rdfs:label xml:lang="en-GB">ActivityFinalNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:FinalNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5358,6 +5372,7 @@
 		<rdfs:label xml:lang="en-GB">ActivityGroup</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5373,6 +5388,7 @@
 		<rdfs:label xml:lang="en-GB">ActivityNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5393,6 +5409,7 @@
 		<rdfs:label xml:lang="en-GB">ActivityParameterNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ObjectNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5423,6 +5440,7 @@
 		<rdfs:label xml:lang="en-GB">Actor</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:BehavioredClassifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5453,6 +5471,7 @@
 		<rdfs:label xml:lang="en-GB">AnyReceiveEvent</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:MessageEvent"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5468,6 +5487,8 @@
 		<rdfs:label xml:lang="en-GB">Association</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
+		<rdfs:subClassOf rdf:resource="sysml:Relationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5503,6 +5524,7 @@
 		<rdfs:label xml:lang="en-GB">Behavior</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Class"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5543,6 +5565,7 @@
 		<rdfs:label xml:lang="en-GB">BehaviorExecutionSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ExecutionSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5558,6 +5581,8 @@
 		<rdfs:label xml:lang="en-GB">BehavioralFeature</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:Feature"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5593,6 +5618,7 @@
 		<rdfs:label xml:lang="en-GB">BehavioredClassifier</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5623,6 +5649,7 @@
 		<rdfs:label xml:lang="en-GB">CallAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InvocationAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5653,6 +5680,7 @@
 		<rdfs:label xml:lang="en-GB">CallBehaviorAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:CallAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5683,6 +5711,7 @@
 		<rdfs:label xml:lang="en-GB">CallEvent</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:MessageEvent"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5698,6 +5727,7 @@
 		<rdfs:label xml:lang="en-GB">CallOperationAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:CallAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5728,6 +5758,7 @@
 		<rdfs:label xml:lang="en-GB">ChangeEvent</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Event"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5743,6 +5774,8 @@
 		<rdfs:label xml:lang="en-GB">Class</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:EncapsulatedClassifier"/>
+		<rdfs:subClassOf rdf:resource="sysml:BehavioredClassifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5778,6 +5811,10 @@
 		<rdfs:label xml:lang="en-GB">Classifier</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:Type"/>
+		<rdfs:subClassOf rdf:resource="sysml:TemplateableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5808,6 +5845,7 @@
 		<rdfs:label xml:lang="en-GB">Comment</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Comment_body">
 		<rdfs:label xml:lang="en-GB">body</rdfs:label>
@@ -5818,6 +5856,8 @@
 		<rdfs:label xml:lang="en-GB">ConnectableElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:TypedElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:ParameterableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5833,6 +5873,7 @@
 		<rdfs:label xml:lang="en-GB">Constraint</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5848,6 +5889,7 @@
 		<rdfs:label xml:lang="en-GB">ControlFlow</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityEdge"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5868,6 +5910,7 @@
 		<rdfs:label xml:lang="en-GB">ControlNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5888,6 +5931,7 @@
 		<rdfs:label xml:lang="en-GB">DataType</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5918,6 +5962,8 @@
 		<rdfs:label xml:lang="en-GB">Dependency</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5933,6 +5979,7 @@
 		<rdfs:label xml:lang="en-GB">DeployedArtifact</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5948,6 +5995,7 @@
 		<rdfs:label xml:lang="en-GB">DeploymentTarget</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5963,6 +6011,7 @@
 		<rdfs:label xml:lang="en-GB">DestructionOccurrenceSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:MessageOccurrenceSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -5978,16 +6027,19 @@
 		<rdfs:label xml:lang="en-GB">DirectedRelationship</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Relationship"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:Element">
 		<rdfs:label xml:lang="en-GB">Element</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:EModelElement"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:ElementImport">
 		<rdfs:label xml:lang="en-GB">ElementImport</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:ElementImport_alias">
 		<rdfs:label xml:lang="en-GB">alias</rdfs:label>
@@ -6003,6 +6055,7 @@
 		<rdfs:label xml:lang="en-GB">EncapsulatedClassifier</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuredClassifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6033,6 +6086,7 @@
 		<rdfs:label xml:lang="en-GB">Enumeration</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DataType"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6063,6 +6117,7 @@
 		<rdfs:label xml:lang="en-GB">EnumerationLiteral</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InstanceSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6078,6 +6133,7 @@
 		<rdfs:label xml:lang="en-GB">Event</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6093,6 +6149,7 @@
 		<rdfs:label xml:lang="en-GB">ExecutableNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6113,6 +6170,7 @@
 		<rdfs:label xml:lang="en-GB">ExecutionOccurrenceSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:OccurrenceSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6128,6 +6186,7 @@
 		<rdfs:label xml:lang="en-GB">ExecutionSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6143,6 +6202,7 @@
 		<rdfs:label xml:lang="en-GB">Expression</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6163,6 +6223,8 @@
 		<rdfs:label xml:lang="en-GB">Extend</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6178,6 +6240,7 @@
 		<rdfs:label xml:lang="en-GB">ExtensionPoint</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6198,6 +6261,7 @@
 		<rdfs:label xml:lang="en-GB">Feature</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6223,6 +6287,7 @@
 		<rdfs:label xml:lang="en-GB">FinalNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ControlNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6243,6 +6308,7 @@
 		<rdfs:label xml:lang="en-GB">FunctionBehavior</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:OpaqueBehavior"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6293,6 +6359,7 @@
 		<rdfs:label xml:lang="en-GB">GeneralOrdering</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6308,6 +6375,7 @@
 		<rdfs:label xml:lang="en-GB">Generalization</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Generalization_isSubstitutable">
 		<rdfs:label xml:lang="en-GB">isSubstitutable</rdfs:label>
@@ -6318,6 +6386,8 @@
 		<rdfs:label xml:lang="en-GB">Include</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6333,6 +6403,7 @@
 		<rdfs:label xml:lang="en-GB">InitialNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ControlNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6353,6 +6424,7 @@
 		<rdfs:label xml:lang="en-GB">InputPin</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Pin"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6398,6 +6470,9 @@
 		<rdfs:label xml:lang="en-GB">InstanceSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DeploymentTarget"/>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:DeployedArtifact"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6413,6 +6488,7 @@
 		<rdfs:label xml:lang="en-GB">InstanceValue</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6428,6 +6504,8 @@
 		<rdfs:label xml:lang="en-GB">Interaction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Behavior"/>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6468,6 +6546,7 @@
 		<rdfs:label xml:lang="en-GB">InteractionFragment</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6483,6 +6562,7 @@
 		<rdfs:label xml:lang="en-GB">Interface</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6513,6 +6593,7 @@
 		<rdfs:label xml:lang="en-GB">InterfaceRealization</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Realization"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6528,6 +6609,7 @@
 		<rdfs:label xml:lang="en-GB">InvocationAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6553,6 +6635,7 @@
 		<rdfs:label xml:lang="en-GB">Lifeline</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6568,6 +6651,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralBoolean</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LiteralSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6588,6 +6672,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralInteger</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LiteralSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6608,6 +6693,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralNull</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LiteralSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6623,6 +6709,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralReal</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LiteralSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6643,6 +6730,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6658,6 +6746,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralString</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LiteralSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6678,6 +6767,7 @@
 		<rdfs:label xml:lang="en-GB">LiteralUnlimitedNatural</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LiteralSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6698,6 +6788,7 @@
 		<rdfs:label xml:lang="en-GB">Message</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6718,6 +6809,7 @@
 		<rdfs:label xml:lang="en-GB">MessageEnd</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6733,6 +6825,7 @@
 		<rdfs:label xml:lang="en-GB">MessageEvent</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Event"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6748,6 +6841,8 @@
 		<rdfs:label xml:lang="en-GB">MessageOccurrenceSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:OccurrenceSpecification"/>
+		<rdfs:subClassOf rdf:resource="sysml:MessageEnd"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6763,6 +6858,7 @@
 		<rdfs:label xml:lang="en-GB">MultiplicityElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:MultiplicityElement_isOrdered">
 		<rdfs:label xml:lang="en-GB">isOrdered</rdfs:label>
@@ -6778,6 +6874,7 @@
 		<rdfs:label xml:lang="en-GB">NamedElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6793,6 +6890,7 @@
 		<rdfs:label xml:lang="en-GB">Namespace</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6808,6 +6906,7 @@
 		<rdfs:label xml:lang="en-GB">ObjectFlow</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityEdge"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6838,6 +6937,8 @@
 		<rdfs:label xml:lang="en-GB">ObjectNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityNode"/>
+		<rdfs:subClassOf rdf:resource="sysml:TypedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6868,6 +6969,7 @@
 		<rdfs:label xml:lang="en-GB">OccurrenceSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6883,6 +6985,7 @@
 		<rdfs:label xml:lang="en-GB">OpaqueAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6918,6 +7021,7 @@
 		<rdfs:label xml:lang="en-GB">OpaqueBehavior</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Behavior"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6968,6 +7072,7 @@
 		<rdfs:label xml:lang="en-GB">OpaqueExpression</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -6993,6 +7098,9 @@
 		<rdfs:label xml:lang="en-GB">Operation</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:BehavioralFeature"/>
+		<rdfs:subClassOf rdf:resource="sysml:ParameterableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:TemplateableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7033,6 +7141,7 @@
 		<rdfs:label xml:lang="en-GB">OutputPin</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Pin"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7078,6 +7187,9 @@
 		<rdfs:label xml:lang="en-GB">Package</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:TemplateableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7098,6 +7210,7 @@
 		<rdfs:label xml:lang="en-GB">PackageImport</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:PackageImport_visibility">
 		<rdfs:label xml:lang="en-GB">visibility</rdfs:label>
@@ -7108,11 +7221,14 @@
 		<rdfs:label xml:lang="en-GB">PackageMerge</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:PackageableElement">
 		<rdfs:label xml:lang="en-GB">PackageableElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:ParameterableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7128,6 +7244,8 @@
 		<rdfs:label xml:lang="en-GB">Parameter</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ConnectableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:MultiplicityElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7173,11 +7291,14 @@
 		<rdfs:label xml:lang="en-GB">ParameterableElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:Pin">
 		<rdfs:label xml:lang="en-GB">Pin</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ObjectNode"/>
+		<rdfs:subClassOf rdf:resource="sysml:MultiplicityElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7223,6 +7344,7 @@
 		<rdfs:label xml:lang="en-GB">PrimitiveType</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DataType"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7253,6 +7375,9 @@
 		<rdfs:label xml:lang="en-GB">Property</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuralFeature"/>
+		<rdfs:subClassOf rdf:resource="sysml:ConnectableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:DeploymentTarget"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7313,6 +7438,7 @@
 		<rdfs:label xml:lang="en-GB">Realization</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Abstraction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7328,6 +7454,7 @@
 		<rdfs:label xml:lang="en-GB">Reception</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:BehavioralFeature"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7363,6 +7490,7 @@
 		<rdfs:label xml:lang="en-GB">RedefinableElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7383,11 +7511,13 @@
 		<rdfs:label xml:lang="en-GB">Relationship</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:SendSignalAction">
 		<rdfs:label xml:lang="en-GB">SendSignalAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InvocationAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7413,6 +7543,7 @@
 		<rdfs:label xml:lang="en-GB">Signal</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7443,6 +7574,7 @@
 		<rdfs:label xml:lang="en-GB">SignalEvent</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:MessageEvent"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7458,11 +7590,13 @@
 		<rdfs:label xml:lang="en-GB">Slot</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:StateInvariant">
 		<rdfs:label xml:lang="en-GB">StateInvariant</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7478,6 +7612,9 @@
 		<rdfs:label xml:lang="en-GB">StructuralFeature</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Feature"/>
+		<rdfs:subClassOf rdf:resource="sysml:TypedElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:MultiplicityElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7518,6 +7655,7 @@
 		<rdfs:label xml:lang="en-GB">StructuredClassifier</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7548,6 +7686,7 @@
 		<rdfs:label xml:lang="en-GB">Substitution</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Realization"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7563,6 +7702,7 @@
 		<rdfs:label xml:lang="en-GB">Type</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7578,6 +7718,7 @@
 		<rdfs:label xml:lang="en-GB">TypedElement</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7593,6 +7734,7 @@
 		<rdfs:label xml:lang="en-GB">Usage</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Dependency"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7608,6 +7750,7 @@
 		<rdfs:label xml:lang="en-GB">UseCase</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:BehavioredClassifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7638,6 +7781,7 @@
 		<rdfs:label xml:lang="en-GB">ValuePin</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InputPin"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7683,6 +7827,8 @@
 		<rdfs:label xml:lang="en-GB">ValueSpecification</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:TypedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7698,6 +7844,7 @@
 		<rdfs:label xml:lang="en-GB">ActionInputPin</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InputPin"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7743,6 +7890,7 @@
 		<rdfs:label xml:lang="en-GB">ActivityPartition</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityGroup"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7768,6 +7916,7 @@
 		<rdfs:label xml:lang="en-GB">AddStructuralFeatureValueAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:WriteStructuralFeatureAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7798,6 +7947,7 @@
 		<rdfs:label xml:lang="en-GB">AddVariableValueAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:WriteVariableAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7828,6 +7978,7 @@
 		<rdfs:label xml:lang="en-GB">BroadcastSignalAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InvocationAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7853,6 +8004,7 @@
 		<rdfs:label xml:lang="en-GB">CentralBufferNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ObjectNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7883,11 +8035,13 @@
 		<rdfs:label xml:lang="en-GB">Clause</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:ClearAssociationAction">
 		<rdfs:label xml:lang="en-GB">ClearAssociationAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7913,6 +8067,7 @@
 		<rdfs:label xml:lang="en-GB">ClearStructuralFeatureAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuralFeatureAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7938,6 +8093,7 @@
 		<rdfs:label xml:lang="en-GB">ClearVariableAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:VariableAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7963,6 +8119,7 @@
 		<rdfs:label xml:lang="en-GB">CombinedFragment</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -7983,6 +8140,7 @@
 		<rdfs:label xml:lang="en-GB">ConditionalNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuredActivityNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8023,6 +8181,7 @@
 		<rdfs:label xml:lang="en-GB">ConnectionPointReference</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Vertex"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8038,6 +8197,7 @@
 		<rdfs:label xml:lang="en-GB">Connector</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Feature"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8063,6 +8223,7 @@
 		<rdfs:label xml:lang="en-GB">ConnectorEnd</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:MultiplicityElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:MultiplicityElement_isOrdered">
 		<rdfs:label xml:lang="en-GB">isOrdered</rdfs:label>
@@ -8078,6 +8239,7 @@
 		<rdfs:label xml:lang="en-GB">ConsiderIgnoreFragment</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:CombinedFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8098,6 +8260,7 @@
 		<rdfs:label xml:lang="en-GB">Continuation</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8118,6 +8281,7 @@
 		<rdfs:label xml:lang="en-GB">CreateLinkAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:WriteLinkAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8143,6 +8307,7 @@
 		<rdfs:label xml:lang="en-GB">CreateObjectAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8168,6 +8333,7 @@
 		<rdfs:label xml:lang="en-GB">DecisionNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ControlNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8188,6 +8354,7 @@
 		<rdfs:label xml:lang="en-GB">DestroyLinkAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:WriteLinkAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8213,6 +8380,7 @@
 		<rdfs:label xml:lang="en-GB">DestroyObjectAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8248,6 +8416,7 @@
 		<rdfs:label xml:lang="en-GB">Duration</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8263,6 +8432,7 @@
 		<rdfs:label xml:lang="en-GB">DurationConstraint</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:IntervalConstraint"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8283,6 +8453,7 @@
 		<rdfs:label xml:lang="en-GB">DurationInterval</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Interval"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8298,6 +8469,7 @@
 		<rdfs:label xml:lang="en-GB">DurationObservation</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Observation"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8318,6 +8490,7 @@
 		<rdfs:label xml:lang="en-GB">Extension</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Association"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8353,6 +8526,7 @@
 		<rdfs:label xml:lang="en-GB">ExtensionEnd</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Property"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8413,6 +8587,7 @@
 		<rdfs:label xml:lang="en-GB">FinalState</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:State"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8433,6 +8608,7 @@
 		<rdfs:label xml:lang="en-GB">FlowFinalNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:FinalNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8453,6 +8629,7 @@
 		<rdfs:label xml:lang="en-GB">ForkNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ControlNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8473,6 +8650,7 @@
 		<rdfs:label xml:lang="en-GB">Gate</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:MessageEnd"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8488,6 +8666,7 @@
 		<rdfs:label xml:lang="en-GB">Image</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:Image_content">
 		<rdfs:label xml:lang="en-GB">content</rdfs:label>
@@ -8508,6 +8687,7 @@
 		<rdfs:label xml:lang="en-GB">InteractionConstraint</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Constraint"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8523,6 +8703,8 @@
 		<rdfs:label xml:lang="en-GB">InteractionOperand</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8538,6 +8720,7 @@
 		<rdfs:label xml:lang="en-GB">InteractionUse</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionFragment"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8553,6 +8736,7 @@
 		<rdfs:label xml:lang="en-GB">Interval</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8568,6 +8752,7 @@
 		<rdfs:label xml:lang="en-GB">IntervalConstraint</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Constraint"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8583,6 +8768,7 @@
 		<rdfs:label xml:lang="en-GB">JoinNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ControlNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8608,6 +8794,7 @@
 		<rdfs:label xml:lang="en-GB">LinkAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8633,6 +8820,7 @@
 		<rdfs:label xml:lang="en-GB">LinkEndCreationData</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LinkEndData"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:LinkEndCreationData_isReplaceAll">
 		<rdfs:label xml:lang="en-GB">isReplaceAll</rdfs:label>
@@ -8643,11 +8831,13 @@
 		<rdfs:label xml:lang="en-GB">LinkEndData</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Element"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="sysml:LinkEndDestructionData">
 		<rdfs:label xml:lang="en-GB">LinkEndDestructionData</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LinkEndData"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:LinkEndDestructionData_isDestroyDuplicates">
 		<rdfs:label xml:lang="en-GB">isDestroyDuplicates</rdfs:label>
@@ -8658,6 +8848,7 @@
 		<rdfs:label xml:lang="en-GB">LoopNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuredActivityNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8693,6 +8884,7 @@
 		<rdfs:label xml:lang="en-GB">MergeNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ControlNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8713,6 +8905,7 @@
 		<rdfs:label xml:lang="en-GB">Observation</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8728,6 +8921,7 @@
 		<rdfs:label xml:lang="en-GB">PartDecomposition</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InteractionUse"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8743,6 +8937,7 @@
 		<rdfs:label xml:lang="en-GB">Port</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Property"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8818,6 +9013,7 @@
 		<rdfs:label xml:lang="en-GB">Profile</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Package"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8838,6 +9034,7 @@
 		<rdfs:label xml:lang="en-GB">ProfileApplication</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:ProfileApplication_isStrict">
 		<rdfs:label xml:lang="en-GB">isStrict</rdfs:label>
@@ -8848,6 +9045,7 @@
 		<rdfs:label xml:lang="en-GB">Pseudostate</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Vertex"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8868,6 +9066,7 @@
 		<rdfs:label xml:lang="en-GB">RaiseExceptionAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8893,6 +9092,7 @@
 		<rdfs:label xml:lang="en-GB">ReadLinkAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LinkAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8918,6 +9118,7 @@
 		<rdfs:label xml:lang="en-GB">ReadSelfAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8943,6 +9144,7 @@
 		<rdfs:label xml:lang="en-GB">ReadStructuralFeatureAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuralFeatureAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8968,6 +9170,7 @@
 		<rdfs:label xml:lang="en-GB">ReadVariableAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:VariableAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -8993,6 +9196,8 @@
 		<rdfs:label xml:lang="en-GB">Region</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9013,6 +9218,7 @@
 		<rdfs:label xml:lang="en-GB">RemoveStructuralFeatureValueAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:WriteStructuralFeatureAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9043,6 +9249,7 @@
 		<rdfs:label xml:lang="en-GB">RemoveVariableValueAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:WriteVariableAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9073,6 +9280,7 @@
 		<rdfs:label xml:lang="en-GB">SendObjectAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:InvocationAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9098,6 +9306,7 @@
 		<rdfs:label xml:lang="en-GB">SequenceNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuredActivityNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9128,6 +9337,9 @@
 		<rdfs:label xml:lang="en-GB">State</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:Vertex"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9148,6 +9360,7 @@
 		<rdfs:label xml:lang="en-GB">StateMachine</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Behavior"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9188,6 +9401,7 @@
 		<rdfs:label xml:lang="en-GB">Stereotype</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Class"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9223,6 +9437,7 @@
 		<rdfs:label xml:lang="en-GB">StructuralFeatureAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9248,6 +9463,9 @@
 		<rdfs:label xml:lang="en-GB">StructuredActivityNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityGroup"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9278,6 +9496,7 @@
 		<rdfs:label xml:lang="en-GB">TestIdentityAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9303,6 +9522,7 @@
 		<rdfs:label xml:lang="en-GB">TimeConstraint</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:IntervalConstraint"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9323,6 +9543,7 @@
 		<rdfs:label xml:lang="en-GB">TimeEvent</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Event"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9343,6 +9564,7 @@
 		<rdfs:label xml:lang="en-GB">TimeExpression</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ValueSpecification"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9358,6 +9580,7 @@
 		<rdfs:label xml:lang="en-GB">TimeInterval</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Interval"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9373,6 +9596,7 @@
 		<rdfs:label xml:lang="en-GB">TimeObservation</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Observation"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9393,6 +9617,8 @@
 		<rdfs:label xml:lang="en-GB">Transition</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Namespace"/>
+		<rdfs:subClassOf rdf:resource="sysml:RedefinableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9418,6 +9644,7 @@
 		<rdfs:label xml:lang="en-GB">ValueSpecificationAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9443,6 +9670,8 @@
 		<rdfs:label xml:lang="en-GB">Variable</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ConnectableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:MultiplicityElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9468,6 +9697,7 @@
 		<rdfs:label xml:lang="en-GB">VariableAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9493,6 +9723,7 @@
 		<rdfs:label xml:lang="en-GB">Vertex</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9508,6 +9739,7 @@
 		<rdfs:label xml:lang="en-GB">WriteLinkAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:LinkAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9533,6 +9765,7 @@
 		<rdfs:label xml:lang="en-GB">WriteStructuralFeatureAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:StructuralFeatureAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9558,6 +9791,7 @@
 		<rdfs:label xml:lang="en-GB">WriteVariableAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:VariableAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9583,6 +9817,7 @@
 		<rdfs:label xml:lang="en-GB">AcceptCallAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:AcceptEventAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9613,6 +9848,7 @@
 		<rdfs:label xml:lang="en-GB">AcceptEventAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9643,6 +9879,8 @@
 		<rdfs:label xml:lang="en-GB">AssociationClass</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Class"/>
+		<rdfs:subClassOf rdf:resource="sysml:Association"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9683,6 +9921,7 @@
 		<rdfs:label xml:lang="en-GB">CreateLinkObjectAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:CreateLinkAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9708,6 +9947,7 @@
 		<rdfs:label xml:lang="en-GB">DataStoreNode</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:CentralBufferNode"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9738,6 +9978,7 @@
 		<rdfs:label xml:lang="en-GB">GeneralizationSet</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9763,6 +10004,8 @@
 		<rdfs:label xml:lang="en-GB">InformationFlow</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:PackageableElement"/>
+		<rdfs:subClassOf rdf:resource="sysml:DirectedRelationship"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9778,6 +10021,7 @@
 		<rdfs:label xml:lang="en-GB">InformationItem</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Classifier"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9808,6 +10052,7 @@
 		<rdfs:label xml:lang="en-GB">InterruptibleActivityRegion</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:ActivityGroup"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9823,6 +10068,7 @@
 		<rdfs:label xml:lang="en-GB">Model</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Package"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9848,6 +10094,7 @@
 		<rdfs:label xml:lang="en-GB">ParameterSet</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:NamedElement"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9863,6 +10110,7 @@
 		<rdfs:label xml:lang="en-GB">ReadExtentAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9888,6 +10136,7 @@
 		<rdfs:label xml:lang="en-GB">ReadIsClassifiedObjectAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9918,6 +10167,7 @@
 		<rdfs:label xml:lang="en-GB">ReadLinkObjectEndAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9943,6 +10193,7 @@
 		<rdfs:label xml:lang="en-GB">ReclassifyObjectAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -9973,6 +10224,7 @@
 		<rdfs:label xml:lang="en-GB">ReduceAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -10003,6 +10255,7 @@
 		<rdfs:label xml:lang="en-GB">ReplyAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -10028,6 +10281,7 @@
 		<rdfs:label xml:lang="en-GB">StartClassifierBehaviorAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -10053,6 +10307,7 @@
 		<rdfs:label xml:lang="en-GB">StartObjectBehaviorAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:CallAction"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>
@@ -10083,6 +10338,7 @@
 		<rdfs:label xml:lang="en-GB">UnmarshallAction</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml#"/>
 		<dcterms:issued>2014-01-05</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Action"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="sysml:NamedElement_name">
 		<rdfs:label xml:lang="en-GB">name</rdfs:label>

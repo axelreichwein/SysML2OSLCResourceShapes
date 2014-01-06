@@ -46,6 +46,7 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -161,10 +162,20 @@ public class ResourceShapeCreation {
 				rdfVocabularyBuffer.append("\r\n");
 				rdfVocabularyBuffer
 						.append("\t\t<dcterms:issued>2014-01-05</dcterms:issued>");
-				rdfVocabularyBuffer.append("\r\n");
+				rdfVocabularyBuffer.append("\r\n");				
+				if(sysmlClass.getEGenericSuperTypes().size() > 0){
+					for (EGenericType genericType : sysmlClass.getEGenericSuperTypes()) {
+						rdfVocabularyBuffer
+						.append("\t\t<rdfs:subClassOf rdf:resource=\""
+								+ omgSysMLNamespacePrefix + ":" + genericType.getEClassifier().getName() + "\"/>");
+						rdfVocabularyBuffer.append("\r\n");
+					}					
+				}				
 				rdfVocabularyBuffer.append("\t</rdfs:Class>");
 				rdfVocabularyBuffer.append("\r\n");
 
+				
+				
 				// Create OSLC Resource Shape
 				StringBuffer resourceShapeBuffer = new StringBuffer();
 				resourceShapeBuffer
