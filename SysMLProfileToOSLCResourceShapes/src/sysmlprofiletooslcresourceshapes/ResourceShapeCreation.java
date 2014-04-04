@@ -67,7 +67,7 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class ResourceShapeCreation {
 
-	static String omgSysMLNamespaceURI = "http://omg/org/sysml/1.3/";
+	static String omgSysMLNamespaceURI = "http://omg.org/sysml/1.3/";
 	static String omgSysMLNamespacePrefix = "sysml";
 	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
 	static String umlEcoreFileLocation = "Original XMI/uml.ecore";
