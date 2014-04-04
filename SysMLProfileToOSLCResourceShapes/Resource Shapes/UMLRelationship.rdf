@@ -4,7 +4,7 @@
 	xmlns:oslc="http://open-services.net/ns/core#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:sysml="http://omg.org/sysml#">
+	xmlns:sysml="http://omg/org/sysml/1.3/">
 	<oslc:ResourceShape rdf:about="http://myOSLCServiceProvider.com/sysml/RelationshipResourceShape">
 		<oslc:describes rdf:resource="sysml:Relationship"/>
 		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Relationship Resource Shape</dcterms:title>

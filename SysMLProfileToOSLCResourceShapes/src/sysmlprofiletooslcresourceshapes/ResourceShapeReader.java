@@ -13,8 +13,9 @@ public class ResourceShapeReader {
 		Model model = ModelFactory.createDefaultModel();
 
 		// use FileManager to read OSLC Resource Shape in RDF
-		String inputFileName = "file:C:/Users/Axel/git/SysMLProfileToOSLCResourceShapes/SysMLProfileToOSLCResourceShapes/Resource Shapes/SysMLBlock.rdf";
-//		String inputFileName = "file:C:/Users/Axel/git/SysMLProfileToOSLCResourceShapes/SysMLProfileToOSLCResourceShapes/RDF Vocabulary/sysmlRDFVocabulary.rdf";
+//		String inputFileName = "file:C:/Users/Axel/git/SysMLProfileToOSLCResourceShapes/SysMLProfileToOSLCResourceShapes/Resource Shapes/SysMLBlock.rdf";
+		String inputFileName = "file:C:/Users/Axel/git/SysMLProfileToOSLCResourceShapes/SysMLProfileToOSLCResourceShapes/RDF Vocabulary/sysmlRDFVocabulary.rdf";
+//		String inputFileName = "file:c:\\Users\\Axel\\Documents\\eclipse-modeling-kepler-workspace\\rdf-triplestore\\foo.rdf";
 		InputStream in = FileManager.get().open(inputFileName);
 		if (in == null) {
 			throw new IllegalArgumentException("File: " + inputFileName

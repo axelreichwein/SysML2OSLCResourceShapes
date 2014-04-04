@@ -67,7 +67,7 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class ResourceShapeCreation {
 
-	static String omgSysMLNamespaceURI = "http://omg.org/sysml#";
+	static String omgSysMLNamespaceURI = "http://omg/org/sysml/1.3/";
 	static String omgSysMLNamespacePrefix = "sysml";
 	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
 	static String umlEcoreFileLocation = "Original XMI/uml.ecore";
@@ -258,15 +258,17 @@ public class ResourceShapeCreation {
 				// Set<EEnum> enumerations = getAllEEnumerations(sysmlClass, new
 				// LinkedHashSet<EEnum>());
 				Set<EEnum> enumerations = new LinkedHashSet<EEnum>();
-				for (EStructuralFeature eStructuralFeature : eStructuralFeatures) {
-					if (eStructuralFeature.isDerived()) {
-						continue;
-					}
-
+				for (EStructuralFeature eStructuralFeature : eStructuralFeatures) {					
 					String propertyID = eStructuralFeature
 							.getEContainingClass().getName()
 							+ "_"
-							+ eStructuralFeature.getName();
+							+ eStructuralFeature.getName();					
+					if (metaPropertyURIs.contains(propertyID)) {
+						System.err.println(propertyID + " ALREADY DEFINED!");
+						continue;
+					} else {
+						metaPropertyURIs.add(propertyID);
+					}
 
 					// Create RDF Property
 					rdfVocabularyBuffer.append("\t<rdf:Property");
@@ -344,6 +346,17 @@ public class ResourceShapeCreation {
 					rdfVocabularyBuffer.append("\t</rdf:Property>");
 					rdfVocabularyBuffer.append("\r\n");
 
+				}
+				
+				for (EStructuralFeature eStructuralFeature : eStructuralFeatures) {				
+					String propertyID = eStructuralFeature
+							.getEContainingClass().getName()
+							+ "_"
+							+ eStructuralFeature.getName();
+					if (eStructuralFeature.isDerived()) {
+						continue;
+					}
+					
 					// if (metaPropertyURIs.contains(propertyID)) {
 					// // System.err.println(propertyID + " ALREADY DEFINED!");
 					// continue;
