@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:sysml="http://omg.org/sysml/1.3/">
+	<rdfs:Class rdf:about="sysml:FullPort">
+		<rdfs:label xml:lang="en-GB">FullPort</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:ProxyPort">
+		<rdfs:label xml:lang="en-GB">ProxyPort</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:FlowProperty">
+		<rdfs:label xml:lang="en-GB">FlowProperty</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:FlowProperty_direction">
+		<rdfs:label xml:lang="en-GB">direction</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:ItemFlow">
+		<rdfs:label xml:lang="en-GB">ItemFlow</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:ItemFlow_itemProperty">
+		<rdfs:label xml:lang="en-GB">itemProperty</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:InterfaceBlock">
+		<rdfs:label xml:lang="en-GB">InterfaceBlock</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Block"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Block_isEncapsulated">
+		<rdfs:label xml:lang="en-GB">isEncapsulated</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:InvocationOnNestedPortAction">
+		<rdfs:label xml:lang="en-GB">InvocationOnNestedPortAction</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:InvocationOnNestedPortAction_onNestedPort">
+		<rdfs:label xml:lang="en-GB">onNestedPort</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:TriggerOnNestedPort">
+		<rdfs:label xml:lang="en-GB">TriggerOnNestedPort</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:TriggerOnNestedPort_onNestedPort">
+		<rdfs:label xml:lang="en-GB">onNestedPort</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:AcceptChangeStructuralFeatureEventAction">
+		<rdfs:label xml:lang="en-GB">AcceptChangeStructuralFeatureEventAction</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:ChangeStructuralFeatureEvent">
+		<rdfs:label xml:lang="en-GB">ChangeStructuralFeatureEvent</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:ChangeStructuralFeatureEvent_structuralFeature">
+		<rdfs:label xml:lang="en-GB">structuralFeature</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:DirectedFeature">
+		<rdfs:label xml:lang="en-GB">DirectedFeature</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:DirectedFeature_featureDirection">
+		<rdfs:label xml:lang="en-GB">featureDirection</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:DistributedProperty">
+		<rdfs:label xml:lang="en-GB">DistributedProperty</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:PropertySpecificType">
+		<rdfs:label xml:lang="en-GB">PropertySpecificType</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:ParticipantProperty">
+		<rdfs:label xml:lang="en-GB">ParticipantProperty</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:ParticipantProperty_end">
+		<rdfs:label xml:lang="en-GB">end</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:ValueType">
+		<rdfs:label xml:lang="en-GB">ValueType</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:ValueType_quantityKind">
+		<rdfs:label xml:lang="en-GB">quantityKind</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:ValueType_unit">
+		<rdfs:label xml:lang="en-GB">unit</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:QuantityKind">
+		<rdfs:label xml:lang="en-GB">QuantityKind</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:QuantityKind_symbol">
+		<rdfs:label xml:lang="en-GB">symbol</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:QuantityKind_description">
+		<rdfs:label xml:lang="en-GB">description</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:QuantityKind_definitionUri">
+		<rdfs:label xml:lang="en-GB">definitionUri</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:Unit">
+		<rdfs:label xml:lang="en-GB">Unit</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Unit_quantityKind">
+		<rdfs:label xml:lang="en-GB">quantityKind</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Unit_symbol">
+		<rdfs:label xml:lang="en-GB">symbol</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Unit_description">
+		<rdfs:label xml:lang="en-GB">description</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Unit_definitionUri">
+		<rdfs:label xml:lang="en-GB">definitionUri</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:ConnectorProperty">
+		<rdfs:label xml:lang="en-GB">ConnectorProperty</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:ConnectorProperty_connector">
+		<rdfs:label xml:lang="en-GB">connector</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:NestedConnectorEnd">
+		<rdfs:label xml:lang="en-GB">NestedConnectorEnd</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:NestedConnectorEnd_propertyPath">
+		<rdfs:label xml:lang="en-GB">propertyPath</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:BindingConnector">
+		<rdfs:label xml:lang="en-GB">BindingConnector</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Block">
+		<rdfs:label xml:lang="en-GB">Block</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:FlowPort">
+		<rdfs:label xml:lang="en-GB">FlowPort</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:FlowPort_isAtomic">
+		<rdfs:label xml:lang="en-GB">isAtomic</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:FlowPort_direction">
+		<rdfs:label xml:lang="en-GB">direction</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:FlowSpecification">
+		<rdfs:label xml:lang="en-GB">FlowSpecification</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:AllocateActivityPartition">
+		<rdfs:label xml:lang="en-GB">AllocateActivityPartition</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Allocate">
+		<rdfs:label xml:lang="en-GB">Allocate</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Allocated">
+		<rdfs:label xml:lang="en-GB">Allocated</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Allocated_allocatedFrom">
+		<rdfs:label xml:lang="en-GB">allocatedFrom</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Allocated_allocatedTo">
+		<rdfs:label xml:lang="en-GB">allocatedTo</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:ConstraintBlock">
+		<rdfs:label xml:lang="en-GB">ConstraintBlock</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Block"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:ConstraintProperty">
+		<rdfs:label xml:lang="en-GB">ConstraintProperty</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Requirement">
+		<rdfs:label xml:lang="en-GB">Requirement</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Requirement_text">
+		<rdfs:label xml:lang="en-GB">text</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_id">
+		<rdfs:label xml:lang="en-GB">id</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_derived">
+		<rdfs:label xml:lang="en-GB">derived</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_derivedFrom">
+		<rdfs:label xml:lang="en-GB">derivedFrom</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_satisfiedBy">
+		<rdfs:label xml:lang="en-GB">satisfiedBy</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_refinedBy">
+		<rdfs:label xml:lang="en-GB">refinedBy</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_tracedTo">
+		<rdfs:label xml:lang="en-GB">tracedTo</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_verifiedBy">
+		<rdfs:label xml:lang="en-GB">verifiedBy</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Requirement_master">
+		<rdfs:label xml:lang="en-GB">master</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:Verify">
+		<rdfs:label xml:lang="en-GB">Verify</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:TestCase">
+		<rdfs:label xml:lang="en-GB">TestCase</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Satisfy">
+		<rdfs:label xml:lang="en-GB">Satisfy</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:RequirementRelated">
+		<rdfs:label xml:lang="en-GB">RequirementRelated</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:RequirementRelated_tracedFrom">
+		<rdfs:label xml:lang="en-GB">tracedFrom</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:RequirementRelated_satisfies">
+		<rdfs:label xml:lang="en-GB">satisfies</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:RequirementRelated_refines">
+		<rdfs:label xml:lang="en-GB">refines</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:RequirementRelated_verifies">
+		<rdfs:label xml:lang="en-GB">verifies</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:DeriveReqt">
+		<rdfs:label xml:lang="en-GB">DeriveReqt</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Copy">
+		<rdfs:label xml:lang="en-GB">Copy</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Trace"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Probability">
+		<rdfs:label xml:lang="en-GB">Probability</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Probability_probability">
+		<rdfs:label xml:lang="en-GB">probability</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:Optional">
+		<rdfs:label xml:lang="en-GB">Optional</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:NoBuffer">
+		<rdfs:label xml:lang="en-GB">NoBuffer</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Rate">
+		<rdfs:label xml:lang="en-GB">Rate</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Rate_rate">
+		<rdfs:label xml:lang="en-GB">rate</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:ControlOperator">
+		<rdfs:label xml:lang="en-GB">ControlOperator</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Continuous">
+		<rdfs:label xml:lang="en-GB">Continuous</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Rate"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Overwrite">
+		<rdfs:label xml:lang="en-GB">Overwrite</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Discrete">
+		<rdfs:label xml:lang="en-GB">Discrete</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+		<rdfs:subClassOf rdf:resource="sysml:Rate"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Viewpoint">
+		<rdfs:label xml:lang="en-GB">Viewpoint</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:Viewpoint_stakeholders">
+		<rdfs:label xml:lang="en-GB">stakeholders</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Viewpoint_languages">
+		<rdfs:label xml:lang="en-GB">languages</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Viewpoint_methods">
+		<rdfs:label xml:lang="en-GB">methods</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Viewpoint_purpose">
+		<rdfs:label xml:lang="en-GB">purpose</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdf:Property rdf:about="sysml:Viewpoint_concerns">
+		<rdfs:label xml:lang="en-GB">concerns</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:Rationale">
+		<rdfs:label xml:lang="en-GB">Rationale</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:Conform">
+		<rdfs:label xml:lang="en-GB">Conform</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="sysml:View">
+		<rdfs:label xml:lang="en-GB">View</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+	<rdf:Property rdf:about="sysml:View_viewPoint">
+		<rdfs:label xml:lang="en-GB">viewPoint</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdf:Property>
+	<rdfs:Class rdf:about="sysml:Problem">
+		<rdfs:label xml:lang="en-GB">Problem</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://omg.org/sysml/1.3/"/>
+		<dcterms:issued>2014-April-04</dcterms:issued>
+	</rdfs:Class>
+</rdf:RDF>

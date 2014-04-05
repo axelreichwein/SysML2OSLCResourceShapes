@@ -65,7 +65,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFWriter;
 
-public class ResourceShapeCreation {
+public class SysMLStandAloneAllRDFDocumentsCreation {
 
 	static String omgSysMLNamespaceURI = "http://omg.org/sysml/1.3/";
 	static String omgSysMLNamespacePrefix = "sysml";
@@ -76,7 +76,7 @@ public class ResourceShapeCreation {
 	static EPackage umlPackage;
 	static EPackage primitiveSysMLValueTypesPackage;
 	static Set<String> metaClasses = new HashSet<String>();
-	static Set<String> metaPropertyURIs = new HashSet<String>();
+	static Set<String> metaProperties = new HashSet<String>();
 	static StringBuffer rdfVocabularyBuffer = new StringBuffer();
 
 	public static void main(String[] args) {
@@ -84,16 +84,16 @@ public class ResourceShapeCreation {
 		prepareRDFVocabularyFile();
 		convertSysMLMetamodelIntoRDFandOSLCResources();
 		closeRDFVocabularyFile();
-		
-		System.out.println("Created " + metaClasses.size() + " OSLC Resource Shapes");
+		System.out.println("Created " + metaClasses.size() + " RDF resource types");
+		System.out.println("Created " + metaProperties.size() + " RDF resource properties");		
 	}
 
 	private static void closeRDFVocabularyFile() {
 		rdfVocabularyBuffer.append("</rdf:RDF>");
 		FileWriter rdfsClassFileWriter;
 		try {
-			rdfsClassFileWriter = new FileWriter("RDF Vocabulary/"
-					+ omgSysMLNamespacePrefix + "RDFVocabulary.rdf");
+			rdfsClassFileWriter = new FileWriter("RDF Vocabularies/"
+					+ omgSysMLNamespacePrefix + "StandAloneRDFVocabulary.rdf");
 			rdfsClassFileWriter.append(rdfVocabularyBuffer);
 			rdfsClassFileWriter.close();
 		} catch (IOException e) {
@@ -263,11 +263,11 @@ public class ResourceShapeCreation {
 							.getEContainingClass().getName()
 							+ "_"
 							+ eStructuralFeature.getName();					
-					if (metaPropertyURIs.contains(propertyID)) {
+					if (metaProperties.contains(propertyID)) {
 						System.err.println(propertyID + " ALREADY DEFINED!");
 						continue;
 					} else {
-						metaPropertyURIs.add(propertyID);
+						metaProperties.add(propertyID);
 					}
 
 					// Create RDF Property
