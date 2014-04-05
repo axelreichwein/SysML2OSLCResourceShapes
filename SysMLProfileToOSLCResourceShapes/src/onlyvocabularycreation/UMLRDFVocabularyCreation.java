@@ -133,6 +133,11 @@ public class UMLRDFVocabularyCreation {
 		for (EClassifier eClassifier : eClassifiers) {
 			System.out.println("\t\t" + eClassifier.getName());
 
+			// skip the eClassifier defined by Ecore
+			if(eClassifier.getName().equals("EModelElement")){
+				continue;
+			}
+			
 			if (metaClasses.contains(eClassifier.getName())) {
 //				System.err.println(eClassifier.getName() + " ALREADY DEFINED!");
 				continue;
@@ -194,6 +199,10 @@ public class UMLRDFVocabularyCreation {
 				// rdfs:subClassOf
 				if(eClass.getEGenericSuperTypes().size() > 0){
 					for (EGenericType genericType : eClass.getEGenericSuperTypes()) {
+						// skip the eClassifier defined by Ecore
+						if(genericType.getEClassifier().getName().equals("EModelElement")){
+							continue;
+						}			
 						rdfVocabularyBuffer
 						.append("\t\t<rdfs:subClassOf rdf:resource=\""
 								+ omgUMLNamespacePrefix + ":" + genericType.getEClassifier().getName() + "\"/>");
@@ -209,7 +218,12 @@ public class UMLRDFVocabularyCreation {
 					String propertyID = eStructuralFeature
 							.getEContainingClass().getName()
 							+ "_"
-							+ eStructuralFeature.getName();					
+							+ eStructuralFeature.getName();	
+					// skip the eClassifier defined by Ecore
+					if(propertyID.startsWith("EModelElement")){
+						continue;
+					}
+					
 					if (metaProperties.contains(propertyID)) {
 //						System.err.println(propertyID + " ALREADY DEFINED!");
 						continue;

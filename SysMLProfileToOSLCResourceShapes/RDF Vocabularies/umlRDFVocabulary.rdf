@@ -11,11 +11,6 @@
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Dependency"/>
 	</rdfs:Class>
-	<rdf:Property rdf:about="uml:EModelElement_eAnnotations">
-		<rdfs:label xml:lang="en-GB">eAnnotations</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/uml/2.4.0/"/>
-		<dcterms:issued>2014-April-04</dcterms:issued>
-	</rdf:Property>
 	<rdf:Property rdf:about="uml:Element_ownedComment">
 		<rdfs:label xml:lang="en-GB">ownedComment</rdfs:label>
 		<dcterms:description xml:lang="en-GB">The Comments owned by this element.</dcterms:description>
@@ -156,7 +151,6 @@ A packageable element indicates a named element that may be owned directly by a 
 		<dcterms:description xml:lang="en-GB">An element is a constituent of a model. As such, it has the capability of owning other elements.</dcterms:description>
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/uml/2.4.0/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
-		<rdfs:subClassOf rdf:resource="uml:EModelElement"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="uml:Comment">
 		<rdfs:label xml:lang="en-GB">Comment</rdfs:label>
