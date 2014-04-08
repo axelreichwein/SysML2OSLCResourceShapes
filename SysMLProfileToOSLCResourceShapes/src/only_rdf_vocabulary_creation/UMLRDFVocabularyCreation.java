@@ -24,7 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  * */
 
-package onlyvocabularycreation;
+package only_rdf_vocabulary_creation;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -37,10 +37,10 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EAttribute;
@@ -66,21 +66,21 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFWriter;
 
-public class SysMLRDFVocabularyCreation {
+public class UMLRDFVocabularyCreation {
 
-	static String omgSysMLNamespaceURI = "http://omg.org/sysml/1.3/";
-	static String omgSysMLNamespacePrefix = "sysml";
-	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
-	static EPackage sysmlPackage;
+	static String omgUMLNamespaceURI = "http://omg.org/uml/2.4.0/";	
+	static String omgUMLNamespacePrefix = "uml";
+	static String umlEcoreFileLocation = "Original XMI/uml.ecore";		
+	static EPackage umlPackage;
 	static Set<String> metaClasses = new HashSet<String>();
 	static Set<String> metaProperties = new HashSet<String>();
 	static StringBuffer rdfVocabularyBuffer = new StringBuffer();
 	static String date = "2014-April-04";
 
 	public static void main(String[] args) {
-		loadSysMLProfile();		
+		loadUMLMetaModel();		
 		prepareRDFVocabularyFile();
-		convertSysMLProfileIntoRDFVocabulary();
+		convertUMLMetamodelIntoRDFVocabulary();
 		closeRDFVocabularyFile();		
 		System.out.println("Created " + metaClasses.size() + " RDF resource types");
 		System.out.println("Created " + metaProperties.size() + " RDF resource properties");
@@ -91,7 +91,7 @@ public class SysMLRDFVocabularyCreation {
 		FileWriter rdfsClassFileWriter;
 		try {
 			rdfsClassFileWriter = new FileWriter("RDF Vocabularies/"
-					+ omgSysMLNamespacePrefix + "RDFVocabulary.rdf");
+					+ omgUMLNamespacePrefix + "RDFVocabulary.rdf");
 			rdfsClassFileWriter.append(rdfVocabularyBuffer);
 			rdfsClassFileWriter.close();
 		} catch (IOException e) {
@@ -100,10 +100,10 @@ public class SysMLRDFVocabularyCreation {
 		}		
 	}
 
-	private static void convertSysMLProfileIntoRDFVocabulary() {
-		// Convert SysML metaclasses and stereotypes into RDF vocabulary 
-		ArrayList<EClassifier> sysmlConcepts = getSysMLConceptsToMap();
-		mapConceptsToRDFVocabulary("SysML", sysmlConcepts);	
+	private static void convertUMLMetamodelIntoRDFVocabulary() {
+		// Convert UML metaclasses into RDF vocabulary 		
+		ArrayList<EClassifier> umlConcepts = getUMLConceptsToMap();
+		mapConceptsToRDFVocabulary("UML", umlConcepts);		
 	}
 
 	private static void prepareRDFVocabularyFile() {
@@ -122,8 +122,8 @@ public class SysMLRDFVocabularyCreation {
 		rdfVocabularyBuffer
 				.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
 		rdfVocabularyBuffer.append("\r\n");
-		rdfVocabularyBuffer.append("\txmlns:" + omgSysMLNamespacePrefix + "=\""
-				+ omgSysMLNamespaceURI + "\">");
+		rdfVocabularyBuffer.append("\txmlns:" + omgUMLNamespacePrefix + "=\""
+				+ omgUMLNamespaceURI + "\">");
 		rdfVocabularyBuffer.append("\r\n");
 
 	}
@@ -133,6 +133,11 @@ public class SysMLRDFVocabularyCreation {
 		for (EClassifier eClassifier : eClassifiers) {
 			System.out.println("\t\t" + eClassifier.getName());
 
+			// skip the eClassifier defined by Ecore
+			if(eClassifier.getName().equals("EModelElement")){
+				continue;
+			}
+			
 			if (metaClasses.contains(eClassifier.getName())) {
 //				System.err.println(eClassifier.getName() + " ALREADY DEFINED!");
 				continue;
@@ -141,12 +146,12 @@ public class SysMLRDFVocabularyCreation {
 			}
 
 			if (eClassifier instanceof EClass) {
-				EClass sysmlClass = (EClass) eClassifier;
+				EClass eClass = (EClass) eClassifier;
 
 				// Create RDFS Class
 				rdfVocabularyBuffer.append("\t<rdfs:Class");								
 				rdfVocabularyBuffer.append(" rdf:about=\""
-						+ omgSysMLNamespacePrefix + ":" + eClassifier.getName()
+						+ omgUMLNamespacePrefix + ":" + eClassifier.getName()
 						+ "\">");
 				rdfVocabularyBuffer.append("\r\n");
 				
@@ -157,8 +162,8 @@ public class SysMLRDFVocabularyCreation {
 				rdfVocabularyBuffer.append("\r\n");
 				
 				// dcterms:description
-				if(sysmlClass.getEAnnotations().size() > 0){
-					for (EAnnotation eAnnotation : sysmlClass.getEAnnotations()) {
+				if(eClass.getEAnnotations().size() > 0){
+					for (EAnnotation eAnnotation : eClass.getEAnnotations()) {
 						if(eAnnotation.getSource().equals("http://www.eclipse.org/emf/2002/GenModel")){
 							String documentation = eAnnotation.getDetails().get("documentation");
 							// convert string into UTF8 encoding
@@ -183,7 +188,7 @@ public class SysMLRDFVocabularyCreation {
 				// rdfs:isDefinedBy
 				rdfVocabularyBuffer
 						.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
-								+ omgSysMLNamespaceURI + "\"/>");
+								+ omgUMLNamespaceURI + "\"/>");
 				rdfVocabularyBuffer.append("\r\n");
 				
 				// dcterms:issued
@@ -192,31 +197,33 @@ public class SysMLRDFVocabularyCreation {
 				rdfVocabularyBuffer.append("\r\n");				
 				
 				// rdfs:subClassOf
-				if(sysmlClass.getEGenericSuperTypes().size() > 0){
-					for (EGenericType genericType : sysmlClass.getEGenericSuperTypes()) {
+				if(eClass.getEGenericSuperTypes().size() > 0){
+					for (EGenericType genericType : eClass.getEGenericSuperTypes()) {
+						// skip the eClassifier defined by Ecore
+						if(genericType.getEClassifier().getName().equals("EModelElement")){
+							continue;
+						}			
 						rdfVocabularyBuffer
 						.append("\t\t<rdfs:subClassOf rdf:resource=\""
-								+ omgSysMLNamespacePrefix + ":" + genericType.getEClassifier().getName() + "\"/>");
+								+ omgUMLNamespacePrefix + ":" + genericType.getEClassifier().getName() + "\"/>");
 						rdfVocabularyBuffer.append("\r\n");
 					}					
 				}				
 				rdfVocabularyBuffer.append("\t</rdfs:Class>");
 				rdfVocabularyBuffer.append("\r\n");
 
-				
-//				Set<EStructuralFeature> eStructuralFeatures = getAllEStructuralFeatures(
-//						sysmlClass, new LinkedHashSet<EStructuralFeature>());
-				List<EStructuralFeature> eStructuralFeatures = sysmlClass.getEAllStructuralFeatures();								
+				EList<EStructuralFeature> eStructuralFeatures = eClass.getEAllStructuralFeatures();														
+				Set<EEnum> enumerations = new LinkedHashSet<EEnum>();
 				for (EStructuralFeature eStructuralFeature : eStructuralFeatures) {					
-					if(eStructuralFeature.getName().startsWith("base")){
-						// reference refers to referenced metaclass
-						continue;
-					}
-					
 					String propertyID = eStructuralFeature
 							.getEContainingClass().getName()
 							+ "_"
-							+ eStructuralFeature.getName();					
+							+ eStructuralFeature.getName();	
+					// skip the eClassifier defined by Ecore
+					if(propertyID.startsWith("EModelElement")){
+						continue;
+					}
+					
 					if (metaProperties.contains(propertyID)) {
 //						System.err.println(propertyID + " ALREADY DEFINED!");
 						continue;
@@ -227,7 +234,7 @@ public class SysMLRDFVocabularyCreation {
 					// Create RDF Property
 					rdfVocabularyBuffer.append("\t<rdf:Property");
 					rdfVocabularyBuffer.append(" rdf:about=\""
-							+ omgSysMLNamespacePrefix + ":" + propertyID
+							+ omgUMLNamespacePrefix + ":" + propertyID
 							+ "\">");
 					rdfVocabularyBuffer.append("\r\n");
 					
@@ -265,7 +272,7 @@ public class SysMLRDFVocabularyCreation {
 					// rdfs:isDefinedBy
 					rdfVocabularyBuffer
 							.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
-									+ omgSysMLNamespaceURI + "\"/>");
+									+ omgUMLNamespaceURI + "\"/>");
 					rdfVocabularyBuffer.append("\r\n");
 					
 					// rdfs:subPropertyOf
@@ -282,7 +289,7 @@ public class SysMLRDFVocabularyCreation {
 													+ eStructuralFeature2.getName();
 											rdfVocabularyBuffer
 											.append("\t\t<rdfs:subPropertyOf rdf:resource=\""
-													+ omgSysMLNamespacePrefix + ":" + propertyID2 + "\"/>");
+													+ omgUMLNamespacePrefix + ":" + propertyID2 + "\"/>");
 											rdfVocabularyBuffer.append("\r\n");
 											break;
 										}
@@ -300,39 +307,28 @@ public class SysMLRDFVocabularyCreation {
 					rdfVocabularyBuffer.append("\t</rdf:Property>");
 					rdfVocabularyBuffer.append("\r\n");
 
+					
+					// TODO: support for enumerations
 				}
-				
-				// TODO: support for enumerations
-				// Set<EEnum> enumerations = getAllEEnumerations(sysmlClass, new
-				// LinkedHashSet<EEnum>());
-//				Set<EEnum> enumerations = new LinkedHashSet<EEnum>();
+
 			}
 		}
 
 	}
 
-	private static void loadSysMLProfile() {
-
-		// load sysml.ecore model
-		Resource sysmlEcoreResource = loadEcoreModel(URI
-				.createFileURI(new File(sysmlEcoreFileLocation)
-						.getAbsolutePath()));
-		sysmlPackage = (EPackage) EcoreUtil.getObjectByType(
-				sysmlEcoreResource.getContents(),
+	private static void loadUMLMetaModel() {
+		// load uml.ecore model and get list of all non-abstract uml metaclasses
+		Resource umlEcoreResource = loadEcoreModel(URI.createFileURI(new File(
+				umlEcoreFileLocation).getAbsolutePath()));
+		umlPackage = (EPackage) EcoreUtil.getObjectByType(
+				umlEcoreResource.getContents(),
 				EcorePackage.eINSTANCE.getEPackage());
-		System.out.println(sysmlPackage.getName());
-
 	}
 
-	static private ArrayList<EClassifier> getSysMLConceptsToMap() {
-		ArrayList<EClassifier> sysmlConceptsToMap = new ArrayList<EClassifier>();
-		for (EPackage nestedPackage : sysmlPackage.getESubpackages()) {
-			System.out.println("\t" + nestedPackage.getName());
-			for (EClassifier eClassifier : nestedPackage.getEClassifiers()) {
-				sysmlConceptsToMap.add(eClassifier);
-			}
-		}
-		return sysmlConceptsToMap;
+	static private ArrayList<EClassifier> getUMLConceptsToMap() {
+		ArrayList<EClassifier> conceptsToMap = new ArrayList<EClassifier>();		
+		conceptsToMap.addAll(umlPackage.getEClassifiers());		
+		return conceptsToMap;
 	}
 
 	private static Set<EEnum> getAllEEnumerations(EClass sysmlClass,
@@ -372,8 +368,6 @@ public class SysMLRDFVocabularyCreation {
 		return linkedHashSet;
 	}
 
-	
-
 	private static Resource loadEcoreModel(URI fileURI) {
 		// Create a resource set.
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -393,4 +387,5 @@ public class SysMLRDFVocabularyCreation {
 		return resource;
 	}
 
+	
 }

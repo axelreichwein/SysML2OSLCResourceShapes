@@ -24,7 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  * */
 
-package onlyvocabularycreation;
+package only_rdf_vocabulary_creation;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -311,7 +311,6 @@ public class StandardProfileL2RDFVocabularyCreation {
 	}
 
 	private static void loadStandardProfileL2() {
-
 		// load sysml.ecore model
 		Resource sysmlEcoreResource = loadEcoreModel(URI
 				.createFileURI(new File(standard_profile_l2FileLocation)
@@ -320,7 +319,6 @@ public class StandardProfileL2RDFVocabularyCreation {
 				sysmlEcoreResource.getContents(),
 				EcorePackage.eINSTANCE.getEPackage());
 		System.out.println(l2Package.getName());
-
 	}
 
 	static private ArrayList<EClassifier> getStandardProfileL2ConceptsToMap() {

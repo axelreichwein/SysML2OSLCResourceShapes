@@ -24,7 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  * */
 
-package sysmlprofiletooslcresourceshapes;
+package sysml_standalone_to_oslc_spec;
 
 import java.io.File;
 import java.io.FileNotFoundException;
