@@ -68,7 +68,7 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class UMLRDFVocabularyCreation {
 
-	static String omgUMLNamespaceURI = "http://omg.org/uml/2.4.0/";	
+	static String omgUMLNamespaceURI = "http://omg.org/uml/2.4.1/";	
 	static String omgUMLNamespacePrefix = "uml";
 	static String umlEcoreFileLocation = "Original XMI/uml.ecore";		
 	static EPackage umlPackage;
