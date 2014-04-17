@@ -133,9 +133,13 @@ public class SysMLRDFVocabularyCreation {
 		rdfVocabularyBuffer
 				.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
 		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer.append("\txmlns:standardprofilel2=\""
+				+ "http://omg.org/spec/UML/StandardProfileL2/2.4.1/" + "\"");
+		rdfVocabularyBuffer.append("\r\n");
 		rdfVocabularyBuffer.append("\txmlns:" + omgSysMLNamespacePrefix + "=\""
 				+ omgSysMLNamespaceURI + "\">");
 		rdfVocabularyBuffer.append("\r\n");
+		
 
 	}
 

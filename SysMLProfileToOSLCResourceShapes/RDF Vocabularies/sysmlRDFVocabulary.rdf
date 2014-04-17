@@ -3,6 +3,7 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:standardprofilel2="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"
 	xmlns:sysml="http://omg.org/spec/SysML/1.3/">
 	<rdfs:Class rdf:about="sysml:FullPort">
 		<rdfs:label xml:lang="en-GB">FullPort</rdfs:label>
