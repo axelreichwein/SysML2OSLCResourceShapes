@@ -68,7 +68,7 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class SysMLRDFVocabularyCreation {
 
-	static String omgSysMLNamespaceURI = "http://omg.org/sysml/1.3/";
+	static String omgSysMLNamespaceURI = "http://omg.org/spec/SysML/1.3/";
 	static String omgSysMLNamespacePrefix = "sysml";
 	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
 	static EPackage sysmlPackage;
