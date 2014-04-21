@@ -198,7 +198,19 @@ public class StandardProfileL2RDFVocabularyCreation {
 								+ omgStandardProfileL2NamespacePrefix + ":" + genericType.getEClassifier().getName() + "\"/>");
 						rdfVocabularyBuffer.append("\r\n");
 					}					
-				}				
+				}
+				else{
+					for (EReference eReference : sysmlClass.getEAllReferences()) {				
+						if (eReference.getName().startsWith("base")) {	
+							EClassifier umlClassifier = eReference.getEType();
+							rdfVocabularyBuffer
+							.append("\t\t<rdfs:subClassOf rdf:resource=\""
+									+ "uml" + ":" + umlClassifier.getName() + "\"/>");
+							rdfVocabularyBuffer.append("\r\n");
+							break;
+						}
+					}
+				}
 				rdfVocabularyBuffer.append("\t</rdfs:Class>");
 				rdfVocabularyBuffer.append("\r\n");
 

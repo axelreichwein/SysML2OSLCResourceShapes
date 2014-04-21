@@ -133,6 +133,9 @@ public class SysMLRDFVocabularyCreation {
 		rdfVocabularyBuffer
 				.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
 		rdfVocabularyBuffer.append("\r\n");
+		rdfVocabularyBuffer.append("\txmlns:uml=\""
+				+ "http://omg.org/spec/UML/2.4.1/" + "\"");
+		rdfVocabularyBuffer.append("\r\n");
 		rdfVocabularyBuffer.append("\txmlns:standardprofilel2=\""
 				+ "http://omg.org/spec/UML/StandardProfileL2/2.4.1/" + "\"");
 		rdfVocabularyBuffer.append("\r\n");
@@ -207,7 +210,7 @@ public class SysMLRDFVocabularyCreation {
 				rdfVocabularyBuffer.append("\r\n");				
 				
 				// rdfs:subClassOf
-				if(sysmlClass.getEGenericSuperTypes().size() > 0){
+				if(sysmlClass.getEGenericSuperTypes().size() > 0){					
 					for (EGenericType genericType : sysmlClass.getEGenericSuperTypes()) {
 						String namespacePrefix = getSubClassURIPrefix(genericType.getEClassifier().getName());
 						rdfVocabularyBuffer
@@ -215,7 +218,19 @@ public class SysMLRDFVocabularyCreation {
 								+ namespacePrefix + ":" + genericType.getEClassifier().getName() + "\"/>");
 						rdfVocabularyBuffer.append("\r\n");
 					}					
-				}				
+				}
+				else{
+					for (EReference eReference : sysmlClass.getEAllReferences()) {				
+						if (eReference.getName().startsWith("base")) {	
+							EClassifier umlClassifier = eReference.getEType();
+							rdfVocabularyBuffer
+							.append("\t\t<rdfs:subClassOf rdf:resource=\""
+									+ "uml" + ":" + umlClassifier.getName() + "\"/>");
+							rdfVocabularyBuffer.append("\r\n");
+							break;
+						}
+					}
+				}
 				rdfVocabularyBuffer.append("\t</rdfs:Class>");
 				rdfVocabularyBuffer.append("\r\n");
 
