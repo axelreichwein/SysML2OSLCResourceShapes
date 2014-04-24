@@ -164,7 +164,7 @@ public class SysMLRDFVocabularyCreation {
 				// Create RDFS Class
 				rdfVocabularyBuffer.append("\t<rdfs:Class");								
 				rdfVocabularyBuffer.append(" rdf:about=\""
-						+ omgSysMLNamespacePrefix + ":" + eClassifier.getName()
+						+ omgSysMLNamespaceURI + eClassifier.getName()
 						+ "\">");
 				rdfVocabularyBuffer.append("\r\n");
 				
@@ -258,7 +258,7 @@ public class SysMLRDFVocabularyCreation {
 					// Create RDF Property
 					rdfVocabularyBuffer.append("\t<rdf:Property");
 					rdfVocabularyBuffer.append(" rdf:about=\""
-							+ omgSysMLNamespacePrefix + ":" + propertyID
+							+ omgSysMLNamespaceURI + propertyID
 							+ "\">");
 					rdfVocabularyBuffer.append("\r\n");
 					

@@ -151,7 +151,7 @@ public class UMLRDFVocabularyCreation {
 				// Create RDFS Class
 				rdfVocabularyBuffer.append("\t<rdfs:Class");								
 				rdfVocabularyBuffer.append(" rdf:about=\""
-						+ omgUMLNamespacePrefix + ":" + eClassifier.getName()
+						+ omgUMLNamespaceURI + eClassifier.getName()
 						+ "\">");
 				rdfVocabularyBuffer.append("\r\n");
 				
@@ -234,7 +234,7 @@ public class UMLRDFVocabularyCreation {
 					// Create RDF Property
 					rdfVocabularyBuffer.append("\t<rdf:Property");
 					rdfVocabularyBuffer.append(" rdf:about=\""
-							+ omgUMLNamespacePrefix + ":" + propertyID
+							+ omgUMLNamespaceURI + propertyID
 							+ "\">");
 					rdfVocabularyBuffer.append("\r\n");
 					

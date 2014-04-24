@@ -145,7 +145,7 @@ public class StandardProfileL2RDFVocabularyCreation {
 				// Create RDFS Class
 				rdfVocabularyBuffer.append("\t<rdfs:Class");								
 				rdfVocabularyBuffer.append(" rdf:about=\""
-						+ omgStandardProfileL2NamespacePrefix + ":" + eClassifier.getName()
+						+ omgStandardProfileL2NamespaceURI + eClassifier.getName()
 						+ "\">");
 				rdfVocabularyBuffer.append("\r\n");
 				
@@ -238,7 +238,7 @@ public class StandardProfileL2RDFVocabularyCreation {
 					// Create RDF Property
 					rdfVocabularyBuffer.append("\t<rdf:Property");
 					rdfVocabularyBuffer.append(" rdf:about=\""
-							+ omgStandardProfileL2NamespacePrefix + ":" + propertyID
+							+ omgStandardProfileL2NamespaceURI + propertyID
 							+ "\">");
 					rdfVocabularyBuffer.append("\r\n");
 					
