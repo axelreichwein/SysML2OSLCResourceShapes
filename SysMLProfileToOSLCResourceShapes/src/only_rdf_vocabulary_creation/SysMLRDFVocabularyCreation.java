@@ -226,8 +226,7 @@ public class SysMLRDFVocabularyCreation {
 							rdfVocabularyBuffer
 							.append("\t\t<rdfs:subClassOf rdf:resource=\""
 									+ "uml" + ":" + umlClassifier.getName() + "\"/>");
-							rdfVocabularyBuffer.append("\r\n");
-							break;
+							rdfVocabularyBuffer.append("\r\n");							
 						}
 					}
 				}

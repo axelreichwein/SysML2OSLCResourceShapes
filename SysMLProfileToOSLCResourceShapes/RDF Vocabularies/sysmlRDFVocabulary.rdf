@@ -345,6 +345,7 @@
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/SysML/1.3/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Operation"/>
+		<rdfs:subClassOf rdf:resource="uml:Behavior"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://omg.org/spec/SysML/1.3/Satisfy">
 		<rdfs:label xml:lang="en-GB">Satisfy</rdfs:label>
@@ -395,6 +396,7 @@
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/SysML/1.3/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:ActivityEdge"/>
+		<rdfs:subClassOf rdf:resource="uml:ParameterSet"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="http://omg.org/spec/SysML/1.3/Probability_probability">
 		<rdfs:label xml:lang="en-GB">probability</rdfs:label>
@@ -418,6 +420,7 @@
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/SysML/1.3/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Parameter"/>
+		<rdfs:subClassOf rdf:resource="uml:ActivityEdge"/>
 	</rdfs:Class>
 	<rdf:Property rdf:about="http://omg.org/spec/SysML/1.3/Rate_rate">
 		<rdfs:label xml:lang="en-GB">rate</rdfs:label>
@@ -429,6 +432,7 @@
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/SysML/1.3/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Behavior"/>
+		<rdfs:subClassOf rdf:resource="uml:Operation"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://omg.org/spec/SysML/1.3/Continuous">
 		<rdfs:label xml:lang="en-GB">Continuous</rdfs:label>

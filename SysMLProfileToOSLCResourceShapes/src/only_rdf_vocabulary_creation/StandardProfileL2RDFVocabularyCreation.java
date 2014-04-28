@@ -206,8 +206,7 @@ public class StandardProfileL2RDFVocabularyCreation {
 							rdfVocabularyBuffer
 							.append("\t\t<rdfs:subClassOf rdf:resource=\""
 									+ "uml" + ":" + umlClassifier.getName() + "\"/>");
-							rdfVocabularyBuffer.append("\r\n");
-							break;
+							rdfVocabularyBuffer.append("\r\n");							
 						}
 					}
 				}
@@ -294,8 +293,7 @@ public class StandardProfileL2RDFVocabularyCreation {
 											rdfVocabularyBuffer
 											.append("\t\t<rdfs:subPropertyOf rdf:resource=\""
 													+ omgStandardProfileL2NamespacePrefix + ":" + propertyID2 + "\"/>");
-											rdfVocabularyBuffer.append("\r\n");
-											break;
+											rdfVocabularyBuffer.append("\r\n");					
 										}
 									}
 								}									

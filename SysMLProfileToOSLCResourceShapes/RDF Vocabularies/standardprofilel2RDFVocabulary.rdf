@@ -24,6 +24,7 @@
 		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:BehavioralFeature"/>
+		<rdfs:subClassOf rdf:resource="uml:Usage"/>
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Derive">
 		<rdfs:label xml:lang="en-GB">Derive</rdfs:label>
