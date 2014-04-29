@@ -210,6 +210,7 @@ public class SysMLRDFVocabularyCreation {
 				rdfVocabularyBuffer.append("\r\n");				
 				
 				// rdfs:subClassOf
+				List<EClassifier> umlExtendedClassifiers = new ArrayList<EClassifier>();
 				if(sysmlClass.getEGenericSuperTypes().size() > 0){					
 					for (EGenericType genericType : sysmlClass.getEGenericSuperTypes()) {
 						String namespacePrefix = getSubClassURIPrefix(genericType.getEClassifier().getName());
@@ -219,20 +220,58 @@ public class SysMLRDFVocabularyCreation {
 						rdfVocabularyBuffer.append("\r\n");
 					}					
 				}
-				else{
-					for (EReference eReference : sysmlClass.getEAllReferences()) {				
+				else{									
+					for (EReference eReference : sysmlClass.getEAllReferences()) {						
 						if (eReference.getName().startsWith("base")) {	
-							EClassifier umlClassifier = eReference.getEType();
+							umlExtendedClassifiers.add(eReference.getEType());								
+						}			
+					}
+					if(umlExtendedClassifiers.size() == 1){														
 							rdfVocabularyBuffer
 							.append("\t\t<rdfs:subClassOf rdf:resource=\""
-									+ "uml" + ":" + umlClassifier.getName() + "\"/>");
-							rdfVocabularyBuffer.append("\r\n");							
-						}
-					}
+									+ "uml" + ":" + umlExtendedClassifiers.get(0).getName() + "\"/>");
+							rdfVocabularyBuffer.append("\r\n");													
+					}					
 				}
 				rdfVocabularyBuffer.append("\t</rdfs:Class>");
 				rdfVocabularyBuffer.append("\r\n");
 
+				if(umlExtendedClassifiers.size() > 1){
+					for (EClassifier extendedClassifier : umlExtendedClassifiers) {
+						rdfVocabularyBuffer.append("\t<rdfs:Class");								
+						rdfVocabularyBuffer.append(" rdf:about=\""
+								+ omgSysMLNamespaceURI + extendedClassifier.getName() + "." + eClassifier.getName()
+								+ "\">");
+						rdfVocabularyBuffer.append("\r\n");
+						
+						rdfVocabularyBuffer
+						.append("\t\t<rdfs:label xml:lang=\"en-GB\">"
+								+ eClassifier.getName() + "</rdfs:label>");
+						rdfVocabularyBuffer.append("\r\n");
+						
+						rdfVocabularyBuffer
+						.append("\t\t<rdfs:isDefinedBy rdf:resource=\""
+								+ omgSysMLNamespaceURI + "\"/>");
+						rdfVocabularyBuffer.append("\r\n");
+						
+						rdfVocabularyBuffer
+						.append("\t\t<dcterms:issued>" + date + "</dcterms:issued>");
+						rdfVocabularyBuffer.append("\r\n");
+						
+						String namespacePrefix = getSubClassURIPrefix(extendedClassifier.getName());
+						rdfVocabularyBuffer
+						.append("\t\t<rdfs:subClassOf rdf:resource=\""
+								+ namespacePrefix + ":" + extendedClassifier.getName() + "\"/>");
+						rdfVocabularyBuffer.append("\r\n");
+						rdfVocabularyBuffer
+						.append("\t\t<rdfs:subClassOf rdf:resource=\""
+								+ "sysml" + ":" + eClassifier.getName() + "\"/>");
+						rdfVocabularyBuffer.append("\r\n");
+						
+						rdfVocabularyBuffer.append("\t</rdfs:Class>");
+						rdfVocabularyBuffer.append("\r\n");
+					}
+				}
 				
 //				Set<EStructuralFeature> eStructuralFeatures = getAllEStructuralFeatures(
 //						sysmlClass, new LinkedHashSet<EStructuralFeature>());
