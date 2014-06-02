@@ -68,7 +68,10 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class SysMLRDFVocabularyCreation {
 
-	static String omgSysMLNamespaceURI = "http://omg.org/spec/SysML/1.3/";
+	static String omgNamespaceURI = "http://www.omg.org/techprocess/experimental-rdf/";
+	static String omgSysMLNamespaceURI = omgNamespaceURI + "SysML/1.3/";
+	static String omgUMLNamespaceURI = omgNamespaceURI + "UML/2.4.1/";
+	static String omgUMLStandardProfileL2NamespaceURI = omgNamespaceURI + "UML/StandardProfileL2/2.4.1/";
 	static String omgSysMLNamespacePrefix = "sysml";
 	static String sysmlEcoreFileLocation = "Original XMI/sysMl.ecore";
 	static EPackage sysmlPackage;
@@ -134,10 +137,10 @@ public class SysMLRDFVocabularyCreation {
 				.append("\txmlns:dcterms=\"http://purl.org/dc/terms/\"");
 		rdfVocabularyBuffer.append("\r\n");
 		rdfVocabularyBuffer.append("\txmlns:uml=\""
-				+ "http://omg.org/spec/UML/2.4.1/" + "\"");
+				+ omgUMLNamespaceURI + "\"");
 		rdfVocabularyBuffer.append("\r\n");
 		rdfVocabularyBuffer.append("\txmlns:standardprofilel2=\""
-				+ "http://omg.org/spec/UML/StandardProfileL2/2.4.1/" + "\"");
+				+ omgUMLStandardProfileL2NamespaceURI + "\"");
 		rdfVocabularyBuffer.append("\r\n");
 		rdfVocabularyBuffer.append("\txmlns:" + omgSysMLNamespacePrefix + "=\""
 				+ omgSysMLNamespaceURI + "\">");

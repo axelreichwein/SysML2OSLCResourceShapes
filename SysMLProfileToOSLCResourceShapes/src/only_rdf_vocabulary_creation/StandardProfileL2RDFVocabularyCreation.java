@@ -68,7 +68,8 @@ import com.hp.hpl.jena.rdf.model.RDFWriter;
 
 public class StandardProfileL2RDFVocabularyCreation {
 
-	static String omgStandardProfileL2NamespaceURI = "http://omg.org/spec/UML/StandardProfileL2/2.4.1/";
+	static String omgNamespaceURI = "http://www.omg.org/techprocess/experimental-rdf/";
+	static String omgStandardProfileL2NamespaceURI = omgNamespaceURI + "UML/StandardProfileL2/2.4.1/";		
 	static String omgStandardProfileL2NamespacePrefix = "standardprofilel2";
 	static String standard_profile_l2FileLocation = "Original XMI/l2.ecore";
 	static EPackage l2Package;

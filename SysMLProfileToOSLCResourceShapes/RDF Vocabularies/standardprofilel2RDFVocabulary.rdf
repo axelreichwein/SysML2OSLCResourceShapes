@@ -3,221 +3,221 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
-	xmlns:standardprofilel2="http://omg.org/spec/UML/StandardProfileL2/2.4.1/">
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Auxiliary">
+	xmlns:standardprofilel2="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Auxiliary">
 		<rdfs:label xml:lang="en-GB">Auxiliary</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A class that supports another more central or fundamental class, typically by implementing secondary logic or control flow. The class that the auxiliary supports may be defined explicitly using a Focus class or implicitly as the supplier of dependency relationship whose client is an auxiliary class. Auxiliary classes are typically used together with Focus classes, and are particularly useful for specifying the secondary business logic or control flow of components during design. See also: ?Focus?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Class"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Call">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Call">
 		<rdfs:label xml:lang="en-GB">Call</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A usage dependency whose source is an operation and whose target is an operation. The relationship may also be subsumed to the class containing an operation, with the meaning that there exists an operation in the class to which the dependency applies. A call dependency specifies that the source operation or an operation in the source class invokes the target operation or an operation in the target class. A call dependency may connect a source operation to any target operation that is within scope including, but not limited to, operations of the enclosing classifier and operations of other visible classifiers.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Usage"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Create">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Create">
 		<rdfs:label xml:lang="en-GB">Create</rdfs:label>
 		<dcterms:description xml:lang="en-GB">When applied to a usage dependency, it specifies that the client classifier creates instances of the supplier classifier. When applied to a BehavioralFeature, it specifies that the designated feature creates an instance of the classifier to which the feature is attached.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:BehavioralFeature"/>
 		<rdfs:subClassOf rdf:resource="uml:Usage"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Derive">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Derive">
 		<rdfs:label xml:lang="en-GB">Derive</rdfs:label>
 		<dcterms:description xml:lang="en-GB">Specifies a derivation relationship among model elements that are usually, but not necessarily, of the same type. A derived dependency specifies that the client may be computed from the supplier. The mapping specifies the computation. The client may be implemented for design reasons, such as efficiency, even though it is logically redundant.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Abstraction"/>
 	</rdfs:Class>
-	<rdf:Property rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Derive_computation">
+	<rdf:Property rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Derive_computation">
 		<rdfs:label xml:lang="en-GB">computation</rdfs:label>
 		<dcterms:description xml:lang="en-GB">The specification for computing the derived client element from the derivation supplier element.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 	</rdf:Property>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Destroy">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Destroy">
 		<rdfs:label xml:lang="en-GB">Destroy</rdfs:label>
 		<dcterms:description xml:lang="en-GB">Specifies that the designated feature destroys an instance of the classifier to which the feature is attached.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:BehavioralFeature"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Document">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Document">
 		<rdfs:label xml:lang="en-GB">Document</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A specific kind of file that is not an ?Executable?, ?Library?, ?Script? or ?Source?. Subclass of ?File?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="standardprofilel2:File"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/File">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/File">
 		<rdfs:label xml:lang="en-GB">File</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A physical file in the context of the system developed.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Artifact"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Entity">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Entity">
 		<rdfs:label xml:lang="en-GB">Entity</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A persistent information component representing a business concept.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Component"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Executable">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Executable">
 		<rdfs:label xml:lang="en-GB">Executable</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A program file that can be executed on a computer system. Subclass of ?File?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="standardprofilel2:File"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Focus">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Focus">
 		<rdfs:label xml:lang="en-GB">Focus</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A class that defines the core logic or control flow for one or more auxiliary classes that support it. Support classes may be defined explicitly using Auxiliary classes or implicitly as clients of dependency relationships whose supplier is a focus class. Focus classes are typically used together with one or more Auxiliary classes, and are particularly useful for specifying the core business logic or control flow of components during design. See also: ?Auxiliary?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Class"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Framework">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Framework">
 		<rdfs:label xml:lang="en-GB">Framework</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A package that contains model elements that specify a reusable architecture for all or part of a system. Frameworks typically include classes, patterns, or templates. When frameworks are specialized for an application domain they are sometimes referred to as application frameworks.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Package"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Implement">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Implement">
 		<rdfs:label xml:lang="en-GB">Implement</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A component definition that is not intended to have a specification itself. Rather, it is an implementation for a separate ?Specification? to which it has a Dependency.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Component"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/ImplementationClass">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/ImplementationClass">
 		<rdfs:label xml:lang="en-GB">ImplementationClass</rdfs:label>
 		<dcterms:description xml:lang="en-GB">The implementation of a class in some programming language (e.g., C++, Smalltalk, Java) in which an instance may not have more than one class. This is in contrast to Class, for which an instance may have multiple classes at one time and may gain or lose classes over time, and an object (a child of instance) may dynamically have multiple classes. An Implementation class is said to realize a Classifier if it provides all of the operations defined for the Classifier with the same behavior as specified for the Classifier's operations. An Implementation Class may realize a number of different Types. Note that the physical attributes and associations of the Implementation class do not have to be the same as those of any Classifier it realizes and that the Implementation Class may provide methods for its operations in terms of its physical attributes and associations. See also: ?Type?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Class"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Instantiate">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Instantiate">
 		<rdfs:label xml:lang="en-GB">Instantiate</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A usage dependency among classifiers indicating that operations on the client create instances of the supplier.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Usage"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Library">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Library">
 		<rdfs:label xml:lang="en-GB">Library</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A static or dynamic library file. Subclass of ?File?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="standardprofilel2:File"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Metaclass">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Metaclass">
 		<rdfs:label xml:lang="en-GB">Metaclass</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A class whose instances are also classes.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Class"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/ModelLibrary">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/ModelLibrary">
 		<rdfs:label xml:lang="en-GB">ModelLibrary</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A package that contains model elements that are intended to be reused by other packages. Model libraries are frequently used in conjunction with applied profiles. This is expressed by defining a dependency between a profile and a model library package, or by defining a model library as contained in a profile package. The classes in a model library are not stereotypes and tagged definitions extending the metamodel. A model library is analogous to a class library in some programming languages. When a model library is defined as a part of a profile, it is imported or deleted with the application or removal of the profile. The profile is implicitly applied to its model library. In the other case, when the model library is defined as an external package imported by a profile, the profile requires that the model library be there in the model at the stage of the profile application. The application or the removal of the profile does not affect the presence of the model library elements.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Package"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Process">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Process">
 		<rdfs:label xml:lang="en-GB">Process</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A transaction based component.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Component"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Realization">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Realization">
 		<rdfs:label xml:lang="en-GB">Realization</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A classifier that specifies a domain of objects and that also defines the physical implementation of those objects. For example, a Component stereotyped by ?realization? will only have realizing Classifiers that implement behavior specified by a separate ?Specification? Component. See ?specification?. This differs from ?ImplementationClass? because an ?ImplementationClass? is a realization of a Class that can have features such as attributes and methods that are useful to system designers.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Classifier"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Refine">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Refine">
 		<rdfs:label xml:lang="en-GB">Refine</rdfs:label>
 		<dcterms:description xml:lang="en-GB">Specifies a refinement relationship between model elements at different semantic levels, such as analysis and design. The mapping specifies the relationship between the two elements or sets of elements. The mapping may or may not be computable, and it may be unidirectional or bidirectional. Refinement can be used to model transformations from analysis to design and other such changes.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Abstraction"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Responsibility">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Responsibility">
 		<rdfs:label xml:lang="en-GB">Responsibility</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A contract or an obligation of an element in its relationship to other elements.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Usage"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Script">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Script">
 		<rdfs:label xml:lang="en-GB">Script</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A script file that can be interpreted by a computer system. Subclass of ?File?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="standardprofilel2:File"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Send">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Send">
 		<rdfs:label xml:lang="en-GB">Send</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A usage dependency whose client is an operation and whose supplier is a signal, specifying that the client sends the supplier signal.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Usage"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Service">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Service">
 		<rdfs:label xml:lang="en-GB">Service</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A stateless, functional component (computes a value).</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Component"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Source">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Source">
 		<rdfs:label xml:lang="en-GB">Source</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A source file that can be compiled into an executable file. Subclass of ?File?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="standardprofilel2:File"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Specification">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Specification">
 		<rdfs:label xml:lang="en-GB">Specification</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A class that specifies a domain of objects together with the operations applicable to the objects, without defining the physical implementation of those objects. However, it may have attributes and associations. Behavioral specifications for type operations may be expressed using, for example, activity diagrams. An object may have at most one implementation class, however it may conform to multiple different types. See also: ?ImplementationClass?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Classifier"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Subsystem">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Subsystem">
 		<rdfs:label xml:lang="en-GB">Subsystem</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A unit of hierarchical decomposition for large systems. A subsystem is commonly instantiated indirectly. Definitions of subsystems vary widely among domains and methods, and it is expected that domain and method profiles will specialize this construct. A subsystem may be defined to have specification and realization elements. See also: ?Specification? and ?Realization?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Component"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Type">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Type">
 		<rdfs:label xml:lang="en-GB">Type</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A class that specifies a domain of objects together with the operations applicable to the objects, without defining the physical implementation of those objects. However, it may have attributes and associations. Behavioral specifications for type operations may be expressed using, for example, activity diagrams. An object may have at most one implementation class, however it may conform to multiple different types. See also: ?ImplementationClass?.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Class"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Utility">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Utility">
 		<rdfs:label xml:lang="en-GB">Utility</rdfs:label>
 		<dcterms:description xml:lang="en-GB">A class that has no instances, but rather denotes a named collection of static attributes and static operations, all of which are class-scoped.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Class"/>
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://omg.org/spec/UML/StandardProfileL2/2.4.1/Trace">
+	<rdfs:Class rdf:about="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/Trace">
 		<rdfs:label xml:lang="en-GB">Trace</rdfs:label>
 		<dcterms:description xml:lang="en-GB">Specifies a trace relationship between model elements or sets of model elements that represent the same concept in different models. Traces are mainly used for tracking requirements and changes across models. Since model changes can occur in both directions, the directionality of the dependency can often be ignored. The mapping specifies the relationship between the two, but it is rarely computable and is usually informal.</dcterms:description>
-		<rdfs:isDefinedBy rdf:resource="http://omg.org/spec/UML/StandardProfileL2/2.4.1/"/>
+		<rdfs:isDefinedBy rdf:resource="http://www.omg.org/techprocess/experimental-rdf/UML/StandardProfileL2/2.4.1/"/>
 		<dcterms:issued>2014-April-04</dcterms:issued>
 		<rdfs:subClassOf rdf:resource="uml:Abstraction"/>
 	</rdfs:Class>
